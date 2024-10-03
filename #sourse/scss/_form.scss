@@ -1,0 +1,110 @@
+.form {
+  &__container {
+  }
+
+  &__body {
+    border: 1px solid #b5b4b0;
+    border-radius: 8px;
+    padding: 40px;
+    background: $bg-green;
+    @media (max-width: $tablet) {
+      padding: 40px 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__form {
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    cursor: pointer;
+    background-color: inherit;
+    height: 37px;
+    border-bottom: 1px solid $strock-dark-mode;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $text-grey;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $text-grey;
+    }
+  }
+
+  &__textarea {
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+    background-color: inherit;
+    border-bottom: 1px solid $strock-dark-mode;
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 120%;
+    color: $text-grey;
+    resize: none;
+    font-family: $inter !important;
+    padding-top: 10px;
+    margin-bottom: 16px;
+    &::placeholder {
+      font-weight: 400;
+      font-family: $inter !important;
+      font-size: 14px !important;
+      line-height: 120%;
+      color: $text-grey;
+    }
+  }
+
+  &__check {
+    margin-bottom: 40px;
+  }
+
+  &__check {
+  }
+
+  &__button {
+  }
+}
+
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.custom-file-upload label {
+  cursor: pointer;
+  background-color: inherit;
+  height: 37px;
+  border-bottom: 1px solid $strock-dark-mode;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: $text-grey;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-file-upload input[type='file'] {
+  display: none; /* Скрываем стандартный инпут */
+}
+
+.custom-file-upload span {
+  font-size: 14px;
+  color: #555;
+  display: none;
+}

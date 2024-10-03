@@ -1,0 +1,153 @@
+.footer {
+  background: $bg-dark;
+  padding: 36px 0px;
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 62px;
+    @media (max-width: $tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__left {
+    width: 295px;
+    color: #717171;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    @media (max-width: $mobile) {
+      gap: 40px;
+      flex-wrap: wrap;
+      row-gap: 40px;
+    }
+  }
+
+  &__column {
+  }
+
+  &__menu {
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__title {
+    color: #717171;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: $text-white;
+    opacity: 0.8;
+    transition: all 0.2s;
+    &:hover {
+      border-bottom: 1px solid $text-white;
+    }
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__center {
+    font-weight: 300;
+    font-size: 58px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $text-light-grey;
+    font-family: $noto300;
+    opacity: 0.5;
+    margin-bottom: 62px;
+    @media (max-width: $laptop) {
+      font-size: 45px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 30px;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 50px;
+      font-family: $noto;
+      font-weight: 400;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+    border-bottom: 1px solid $strock-dark-mode;
+    border-top: 1px solid $strock-dark-mode;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $text-light-grey;
+      opacity: 0.8;
+      &:nth-child(1) {
+        order: 2;
+      }
+    }
+    a {
+      transition: all 0.2s;
+      &:hover {
+        border-bottom: 1px solid $text-white;
+      }
+      p {
+        transition: all 0.2s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      padding: 16px 0px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+  }
+}
+
+.mob-footer-1 {
+  @media (max-width: $mobile) {
+    order: 1;
+  }
+}
+.mob-footer-2 {
+  @media (max-width: $mobile) {
+    order: 2;
+  }
+}
+.mob-footer-3 {
+  @media (max-width: $mobile) {
+    order: 3;
+  }
+}

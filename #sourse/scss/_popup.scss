@@ -1,0 +1,486 @@
+body::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+.popup-show body::after {
+  opacity: 1;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+.popup_show .popup__content {
+  visibility: visible;
+  transform: scale(1);
+}
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  border-radius: 10px;
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  //   background-color: #eee;
+  //   padding: 20px;
+  width: 100%;
+  max-width: 580px;
+  background: rgb(248, 249, 251);
+  padding: 55px 50px;
+  height: 100%;
+  //   border-radius: 20px;
+  .lock & {
+    visibility: visible;
+  }
+  @media (max-width: $mobile) {
+    max-width: 100%;
+    padding: 30px 10px;
+  }
+}
+.popup {
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    @media (max-width: $mobile) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+  .consultation__check {
+    margin: 0;
+  }
+  ._label-wallet {
+    align-items: start;
+  }
+  &__title {
+    font-family: "Made";
+    color: #151a21;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    text-align: center;
+    width: 459px;
+    margin-bottom: 50px;
+    span {
+      img {
+        transform: translate(0, -2px);
+      }
+    }
+    @media (max-width: $mobile) {
+      width: 309px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    margin-top: 50px;
+  }
+  .consultation__textarea {
+    @media (max-width: $mobile) {
+      height: 100px;
+    }
+  }
+}
+
+.popup-main {
+  .popup__content {
+    height: 499px;
+    @media (max-width: $mobile) {
+      height: 487px;
+    }
+  }
+}
+.popup__par_2 {
+  @media (max-width: $mobile) {
+    width: 300px;
+  }
+}
+.popup__body_one {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.popup__body_two {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  display: none;
+  p {
+    text-align: center;
+  }
+  &.active {
+    display: flex;
+  }
+  .popup__title {
+    @media (max-width: $mobile) {
+      margin-top: 0;
+    }
+  }
+}
+.consultation {
+  &__input {
+  }
+
+  &__textarea {
+  }
+
+  &__check {
+  }
+
+  &__btn {
+  }
+}
+
+.popup-certificat {
+  .popup__content {
+    max-width: 500px;
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      padding: 60px 10px 10px 10px;
+    }
+  }
+  .popup-close {
+    top: 17px;
+    right: 17px;
+  }
+
+  &__img {
+    img {
+      width: 400px;
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.popup-service {
+  .popup__content {
+    max-width: 742px;
+    padding: 50px 70px;
+  }
+}
+
+.popup-service {
+  .popup__form {
+    width: 100%;
+  }
+  .popup__title {
+    margin-bottom: 20px;
+  }
+  &__items {
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    flex: 0 1 26%;
+    &:first-child {
+      flex: 0 1 48%;
+    }
+    input {
+      width: 100%;
+    }
+    @media (max-width: $mobile) {
+      flex: 0 1 100%;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    color: rgb(66, 73, 79);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 8px;
+    line-height: 110%;
+    letter-spacing: 0%;
+    margin-bottom: 12px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
+
+.popup-service {
+  @media (max-width: $mobile) {
+    padding: 0;
+    border-radius: 0;
+  }
+  .popup__content {
+    @media (max-width: $mobile) {
+      border-radius: 0;
+      padding: 20px 10px;
+    }
+  }
+  .popup__title {
+    @media (max-width: $mobile) {
+      margin-top: 0;
+      max-width: 280px;
+      text-align: left;
+    }
+  }
+  .popup-close {
+    top: 20px;
+    right: 20px;
+    @media (max-width: $mobile) {
+      right: 10px;
+    }
+  }
+  .consultation__input {
+    margin-bottom: 0;
+  }
+  &__counter {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+  }
+
+  &__label {
+    input {
+      &::placeholder {
+        opacity: 0;
+      }
+      @media (max-width: $mobile) {
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__increment {
+  }
+
+  &__icon {
+    cursor: pointer;
+    img,
+    svg {
+      border: 1px solid $white;
+      border-radius: 10px;
+      width: 41px;
+      height: 41px;
+    }
+    &:hover {
+      img,
+      svg {
+        border: 1px solid $accent;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &__decrement {
+    &.disable {
+      svg {
+        fill: #e6e6e6;
+        border: 1px solid #e6e6e6;
+        &:hover {
+          border: 1px solid #e6e6e6;
+        }
+        rect {
+          fill: #e6e6e6;
+        }
+        path {
+          stroke: #aab1b7;
+        }
+      }
+    }
+  }
+
+  ._wallet-chectext {
+    margin-left: 15px;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &__button {
+    margin-top: 0;
+  }
+
+  .consultation__check {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 15px;
+    }
+  }
+  .textik {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0%;
+    padding-left: 33px;
+    margin-bottom: 40px;
+    span {
+      color: $accent;
+    }
+    @media (max-width: $mobile) {
+      padding-left: 0;
+    }
+  }
+}
+.popup-service-input-text {
+  margin-bottom: 12px !important;
+  @media (max-width: $mobile) {
+    margin-bottom: 10px !important;
+  }
+  &_20 {
+    margin-bottom: 20px !important;
+    @media (max-width: $mobile) {
+      margin-bottom: 10px !important;
+    }
+  }
+}
+
+.popup-certificat {
+  &__body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @media (max-width: $mobile) {
+      position: relative;
+    }
+  }
+
+  &__slider {
+    width: 400px;
+    overflow: hidden;
+    @media (max-width: $mobile) {
+      width: calc(100% - 100px);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    min-height: 0px;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  @media (max-width: $mobile) {
+    left: 0;
+  }
+}
+.swiper-button-next {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  @media (max-width: $mobile) {
+    right: 0;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  height: 43px;
+  width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  border-radius: 10px;
+  border: 1px solid rgb(29, 30, 32);
+  cursor: pointer;
+  &:hover {
+    border: 1px solid $accent;
+    svg {
+      path {
+        stroke: $accent;
+      }
+    }
+  }
+  &.swiper-button-disabled {
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    cursor: auto;
+    svg {
+      path {
+        stroke: #aab1b7;
+      }
+    }
+  }
+}
