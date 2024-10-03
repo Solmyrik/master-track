@@ -87,6 +87,9 @@ $bg-green: #e0e1dc;
   @media (max-width: $tablet) {
     font-size: 32px;
   }
+  @media (max-width: $mobile) {
+    font-size: 24px;
+  }
 }
 
 ._h3 {
@@ -326,5 +329,8 @@ $bg-green: #e0e1dc;
     &:hover {
       text-decoration: underline;
     }
+  }
+  @media (max-width: $mobile) {
+    font-size: 12px;
   }
 }
