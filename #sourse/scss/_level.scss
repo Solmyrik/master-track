@@ -36,6 +36,10 @@
       width: 366px;
       max-width: 366px;
     }
+    @media (max-width: 390px) {
+      width: 310px;
+      max-width: 310px;
+    }
     &:hover {
       .footer-level__link {
         svg {

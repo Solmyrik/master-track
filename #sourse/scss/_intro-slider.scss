@@ -128,6 +128,9 @@
       font-size: 65px;
       transform: translate(0, 5px);
     }
+    @media (max-width: 390px) {
+      font-size: 55px;
+    }
   }
 
   &__right {
