@@ -1,12 +1,72 @@
 .header {
-  background: linear-gradient(180deg, #f4f4ef 18.5%, rgba(255, 255, 255, 0) 100%);
+  background: inherit;
+  backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   z-index: 20;
+  .header__logo-w {
+    display: block;
+  }
+  .header__logo-b {
+    display: none;
+  }
+  .header__contact {
+    color: $dark-mode-light-grey;
+  }
+  .header__search {
+    svg {
+      path {
+        stroke: #d6d6d6;
+      }
+      circle {
+        stroke: #d6d6d6;
+      }
+    }
+  }
+  .header__cart {
+    svg {
+      path {
+        fill: #d6d6d6;
+      }
+    }
+  }
+  %menu-dash {
+    background-color: $dark-mode-light-grey;
+  }
   &.black {
     background: linear-gradient(180deg, #f4f4ef 18.5%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: none;
+    %menu-dash {
+      background-color: $bg-total-dark;
+    }
+    .header__logo-w {
+      display: none;
+    }
+    .header__logo-b {
+      display: block;
+    }
+    .header__contact {
+      color: $text-grey;
+    }
+    .header__search {
+      svg {
+        path {
+          stroke: #4c4a4a;
+        }
+        circle {
+          stroke: #4c4a4a;
+        }
+      }
+    }
+    .header__cart {
+      svg {
+        path {
+          fill: #4c4a4a;
+        }
+      }
+    }
   }
   &__wrapper {
   }
@@ -278,7 +338,7 @@ $menu-icon-size: 26px;
 $menu-icon-dash-width: 0.75em; //em(4.5rem, 6rem)
 $menu-icon-dash-height: 0.05em; //em(0.3rem, 6rem)
 $menu-icon-dash-gutter: $menu-icon-dash-height * 5;
-$menu-icon-dash-color: $bg-total-dark;
+$bg-total-dark: $bg-total-dark;
 $menu-icon-dash-border-radius: 0;
 
 %menu-dash {
@@ -286,7 +346,7 @@ $menu-icon-dash-border-radius: 0;
   position: absolute;
   top: 50%;
   left: (1em - $menu-icon-dash-width) / 2; // center X
-  background-color: $menu-icon-dash-color;
+  background-color: $bg-total-dark;
   width: $menu-icon-dash-width;
   height: $menu-icon-dash-height;
   border-radius: $menu-icon-dash-border-radius;
@@ -346,7 +406,7 @@ $menu-icon-dash-border-radius: 0;
 
   &.is-open {
     span {
-      background-color: rgba($menu-icon-dash-color, 0);
+      background-color: rgba($bg-total-dark, 0);
       transition-delay: 0s;
     }
 

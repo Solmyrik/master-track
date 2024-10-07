@@ -139,7 +139,7 @@
     right: 0;
     top: 0;
     img {
-      width: 901px;
+      width: 981px;
       @media (max-width: 1200px) {
         width: 570px;
       }
@@ -150,7 +150,7 @@
     }
     &_2 {
       img {
-        width: 750px;
+        width: 760px;
         @media (max-width: 1200px) {
           width: 470px;
         }
@@ -164,8 +164,10 @@
       img {
         width: 720px;
         padding-right: 40px;
+        padding-top: 50px;
         @media (max-width: 1200px) {
           width: 470px;
+          padding-top: 0px;
         }
         @media (max-width: $mobile) {
           width: 100%;

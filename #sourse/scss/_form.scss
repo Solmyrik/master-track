@@ -52,6 +52,15 @@
       line-height: 120%;
       color: $text-grey;
     }
+    &:hover {
+      color: $text-dark;
+      &::placeholder {
+        color: $text-dark;
+      }
+    }
+    &:focus {
+      color: $text-dark;
+    }
   }
 
   &__textarea {

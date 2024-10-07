@@ -140,14 +140,13 @@ $bg-green: #e0e1dc;
   span {
     transition: all 0.3s;
     position: absolute;
-    right: 10px;
-    top: 7px;
+    right: 6px;
+    top: 6px;
     // padding: 9px;
     border-radius: 50%;
     background-color: $bg-light;
     border: 1px solid $bg-total-dark;
     cursor: pointer;
-    top: 5px;
     height: 32px;
     width: 32px;
     display: flex;
