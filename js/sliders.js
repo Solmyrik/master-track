@@ -25,9 +25,9 @@ if (introSliderContainer) {
       el: '.intro-slider-padingation',
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: true,
+    },
   });
 }
