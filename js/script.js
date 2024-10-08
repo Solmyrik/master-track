@@ -88,3 +88,93 @@ if (iconMenu) {
   });
 }
 // бургер и меню end
+
+// header__search
+const headerSearch = document.querySelector('.header__search');
+const headerSearchInput = document.querySelector('.header__search-input');
+const headerSearchList = document.querySelector('.header__list');
+
+if (headerSearch) {
+  headerSearch.addEventListener('click', (e) => {
+    headerSearchInput.classList.toggle('active');
+    headerSearch.classList.toggle('active');
+    headerSearchList.classList.toggle('active');
+  });
+}
+
+const searchInput = document.querySelector('.header-search-input');
+const searchClose = document.querySelector('.header__search-close');
+
+if (searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value && e.target.value.length > 0) {
+      searchClose.classList.add('active');
+    } else {
+      searchClose.classList.remove('active');
+    }
+  });
+
+  searchClose.addEventListener('click', (e) => {
+    searchInput.value = '';
+  });
+}
+// header__search end
+
+// to top
+
+let toTop = document.querySelector('.to-top');
+let toTopFooter = document.querySelector('.to-top-footer');
+
+let lastPosition = window.pageYOffset;
+let maxPosition = 0;
+
+window.addEventListener('scroll', function () {
+  let currentPosition = window.pageYOffset;
+  const footer = document.querySelector('footer');
+  const footerPosition = footer.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (windowHeight - footerPosition.top <= 65) {
+    if (currentPosition > 1500) {
+      toTop.classList.add('active');
+    } else {
+      toTop.classList.remove('active');
+    }
+    toTopFooter.classList.remove('active');
+  } else {
+    toTop.classList.remove('active');
+    toTopFooter.classList.add('active');
+  }
+});
+
+toTop.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+toTopFooter.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
+
+// function checkFooterPosition() {
+//   const footer = document.querySelector('footer');
+//   const footerPosition = footer.getBoundingClientRect();
+//   const windowHeight = window.innerHeight;
+
+//   if (windowHeight - footerPosition.top <= 55) {
+//     // Выполнить вашу функцию здесь
+//   } else {
+//     toTop.classList.remove('active');
+//   }
+// }
+
+// // Обработчик события прокрутки страницы
+// window.addEventListener('scroll', checkFooterPosition);
+
+// // Вызвать функцию при загрузке страницы для начальной проверки
+// window.addEventListener('load', checkFooterPosition);
+// // to top end

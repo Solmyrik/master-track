@@ -46,20 +46,24 @@
     font-size: 14px;
     line-height: 120%;
     color: $text-grey;
+    border-radius: 0;
     &::placeholder {
       font-weight: 400;
       font-size: 14px;
       line-height: 120%;
       color: $text-grey;
+      border-radius: 0;
     }
     &:hover {
       color: $text-dark;
       &::placeholder {
         color: $text-dark;
+        border-radius: 0;
       }
     }
     &:focus {
       color: $text-dark;
+      border-radius: 0;
     }
   }
 
@@ -77,6 +81,7 @@
     font-family: $inter !important;
     padding-top: 10px;
     margin-bottom: 16px;
+    border-radius: 0;
     &::placeholder {
       font-weight: 400;
       font-family: $inter !important;

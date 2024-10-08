@@ -1,6 +1,7 @@
 .footer {
   background: $bg-dark;
   padding: 36px 0px;
+  position: relative;
   &__container {
   }
 
@@ -161,5 +162,36 @@
 .mob-footer-3 {
   @media (max-width: $mobile) {
     order: 3;
+  }
+}
+
+.to-top-footer {
+  border: 1px solid $strock-light-mode;
+  border-radius: 100px;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  background: $bg-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 40px;
+  top: -25px;
+  display: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  &.active {
+    display: flex;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(244, 244, 239, 0.3);
+      border: 1px solid $strock-dark-mode;
+    }
   }
 }

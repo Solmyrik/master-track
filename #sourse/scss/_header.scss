@@ -1,6 +1,5 @@
 .header {
   background: inherit;
-  backdrop-filter: blur(40px);
   position: fixed;
   top: 0;
   left: 0;
@@ -37,7 +36,7 @@
   }
   &.black {
     background: linear-gradient(180deg, #f4f4ef 18.5%, rgba(255, 255, 255, 0) 100%);
-    backdrop-filter: none;
+
     %menu-dash {
       background-color: $bg-total-dark;
     }
@@ -76,7 +75,7 @@
     justify-content: space-between;
     height: 82px;
     align-items: center;
-    @media (max-width: 1050px) {
+    @media (max-width: 1245px) {
       height: 68px;
     }
     @media (max-width: $mobile) {
@@ -90,7 +89,7 @@
   &__logo {
     img {
       width: 253px;
-      @media (max-width: 1050px) {
+      @media (max-width: 1245px) {
         width: 208px;
       }
       @media (max-width: $mobile) {
@@ -100,7 +99,7 @@
   }
 
   &__menu {
-    @media (max-width: 1050px) {
+    @media (max-width: 1245px) {
       display: none;
     }
   }
@@ -108,6 +107,11 @@
   &__list {
     display: flex;
     gap: 15px;
+    transform: translate(117px, 0);
+    transition: all 0.3s;
+    &.active {
+      transform: translate(0px, 0);
+    }
   }
 
   &__item {
@@ -131,7 +135,7 @@
     display: flex;
     gap: 60px;
     position: relative;
-    @media (max-width: 1050px) {
+    @media (max-width: 1245px) {
       align-items: center;
       gap: 30px;
     }
@@ -145,7 +149,7 @@
     gap: 20px;
     align-items: center;
     position: relative;
-    @media (max-width: 1050px) {
+    @media (max-width: 1245px) {
       margin-right: 30px;
     }
     @media (max-width: $mobile) {
@@ -189,6 +193,8 @@
     flex-direction: column;
     gap: 10px;
     font-weight: 400;
+    position: relative;
+    z-index: 2;
     font-size: 14px;
     line-height: 120%;
     color: $text-grey;
@@ -198,9 +204,87 @@
   }
 }
 
+.header__search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 275px;
+  @media (max-width: 810px) {
+    width: 215px;
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.header__search {
+  transform: translate(250px, 0);
+  transition: all 0.5s ease;
+
+  @media (max-width: 810px) {
+    transform: translate(190px, 0);
+  }
+  &.active {
+    transform: translate(0px, 0);
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.header__search-close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: none;
+  &.active {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.header__search-input {
+  margin-left: 10px;
+  position: relative;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $text-grey;
+  padding-top: 15px;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transform: translate(100%, 0);
+  pointer-events: none;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+  &.active {
+    // width: 100%;
+    pointer-events: all;
+    opacity: 1;
+    transform: translate(0%, 0);
+  }
+
+  input {
+    background-color: inherit;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0px 19px 0px 10px;
+    line-height: 120%;
+    height: 14px;
+    color: $text-light-grey;
+    font-size: 12px;
+    &::placeholder {
+      color: $text-light-grey;
+      font-size: 12px;
+    }
+  }
+}
+
 .menu {
   display: none;
-  @media (max-width: 1050px) {
+  @media (max-width: 1245px) {
     border-top: 1px solid $strock-light-mode;
     // max-height: calc(100vh - 68px);
     display: flex;
@@ -306,6 +390,7 @@
     }
   }
   .header__info {
+    display: none;
     @media (max-width: $mobile) {
       display: flex;
       position: absolute;
@@ -353,7 +438,7 @@ $menu-icon-dash-border-radius: 0;
 }
 
 .menu-icon {
-  @media (max-width: 1050px) {
+  @media (max-width: 1245px) {
   }
 }
 .menu-icon {
@@ -372,7 +457,7 @@ $menu-icon-dash-border-radius: 0;
   touch-action: manipulation;
   cursor: pointer;
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1245px) {
     display: inline-block;
   }
 

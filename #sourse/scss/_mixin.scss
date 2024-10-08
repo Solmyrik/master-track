@@ -333,3 +333,34 @@ $bg-green: #e0e1dc;
     font-size: 12px;
   }
 }
+
+.to-top {
+  border: 1px solid $strock-light-mode;
+  border-radius: 100px;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  background: $bg-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  &.active {
+    display: flex;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  @media (hover: hover) {
+    &:hover {
+      background: rgba(244, 244, 239, 0.3);
+      border: 1px solid $strock-dark-mode;
+    }
+  }
+}
