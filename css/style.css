@@ -25,6 +25,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'InterRegular';
+  src: local("☺"), url("../fonts/InterRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 ._margin-b {
   margin-bottom: 120px;
 }
@@ -1971,6 +1978,7 @@ body.lock {
 }
 
 .intro-slider__text {
+  font-family: 'InterRegular' !important;
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;

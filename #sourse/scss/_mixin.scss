@@ -35,6 +35,12 @@ $maxWidthContainer: 1500;
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'InterRegular';
+  src: local('☺'), url('../fonts/InterRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 //fonts
 $inter: 'Inter', system-ui;
