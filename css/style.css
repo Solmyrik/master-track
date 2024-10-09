@@ -32,6 +32,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'InterMedium';
+  src: local("☺"), url("../fonts/InterMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 ._margin-b {
   margin-bottom: 120px;
 }
@@ -72,6 +79,7 @@
 
 ._h3 {
   font-weight: 500;
+  font-family: "InterMedium";
   font-size: 20px;
   line-height: 120%;
   color: #2e2d2d;
@@ -85,6 +93,7 @@
 
 ._h4 {
   font-weight: 500;
+  font-family: "InterMedium";
   font-size: 14px;
   line-height: 130%;
   text-transform: uppercase;
@@ -105,6 +114,7 @@
           align-items: center;
   padding-left: 40px;
   font-weight: 500;
+  font-family: "InterMedium";
   font-size: 16px;
   line-height: 120%;
   text-transform: uppercase;
@@ -184,6 +194,7 @@
           justify-content: center;
   height: 50px;
   font-weight: 500;
+  font-family: "InterMedium";
   font-size: 16px;
   line-height: 120%;
   text-transform: uppercase;
@@ -236,6 +247,7 @@
 
 ._btn-link {
   font-weight: 500;
+  font-family: "InterMedium";
   font-size: 14px;
   line-height: 130%;
   text-transform: uppercase;
@@ -517,7 +529,7 @@ a {
 body {
   color: #4c4a4a;
   font-size: 16px;
-  font-family: "Inter", system-ui;
+  font-family: 'InterRegular';
   font-weight: 400;
   height: 100%;
   background-color: #f4f4ef;
@@ -577,6 +589,14 @@ body.lock {
   fill: #d6d6d6;
 }
 
+.header .header__search-close svg path {
+  stroke: #aaadb2;
+}
+
+.header .header__search-input {
+  border-bottom: 1px solid #d6d6d6 !important;
+}
+
 .header .menu-icon span, .menu-icon .header span, .header .menu-icon:before, .header .menu-icon:after {
   background-color: #d6d6d6;
 }
@@ -586,8 +606,16 @@ body.lock {
   background: linear-gradient(180deg, #f4f4ef 18.5%, rgba(255, 255, 255, 0) 100%);
 }
 
+.header.black .header__search-close svg path {
+  stroke: #4c4a4a;
+}
+
 .header.black .menu-icon span, .menu-icon .header.black span, .header.black .menu-icon:before, .header.black .menu-icon:after {
   background-color: #2e2d2d;
+}
+
+.header.black .header__search-input {
+  border-bottom: 1px solid #4c4a4a !important;
 }
 
 .header.black .header__logo-w {
@@ -1379,6 +1407,7 @@ body.lock {
 
 .our__link span {
   font-weight: 500;
+  font-family: "InterMedium";
   font-size: 20px;
   line-height: 120%;
   color: #aaadb2;
@@ -2385,7 +2414,7 @@ body.lock {
   line-height: 120%;
   color: #4c4a4a;
   resize: none;
-  font-family: "Inter", system-ui !important;
+  font-family: "InterRegular" !important;
   padding-top: 10px;
   margin-bottom: 16px;
   border-radius: 0;
@@ -2393,7 +2422,7 @@ body.lock {
 
 .form__textarea::-webkit-input-placeholder {
   font-weight: 400;
-  font-family: "Inter", system-ui !important;
+  font-family: "InterRegular" !important;
   font-size: 14px !important;
   line-height: 120%;
   color: #4c4a4a;
@@ -2401,7 +2430,7 @@ body.lock {
 
 .form__textarea:-ms-input-placeholder {
   font-weight: 400;
-  font-family: "Inter", system-ui !important;
+  font-family: "InterRegular" !important;
   font-size: 14px !important;
   line-height: 120%;
   color: #4c4a4a;
@@ -2409,7 +2438,7 @@ body.lock {
 
 .form__textarea::-ms-input-placeholder {
   font-weight: 400;
-  font-family: "Inter", system-ui !important;
+  font-family: "InterRegular" !important;
   font-size: 14px !important;
   line-height: 120%;
   color: #4c4a4a;
@@ -2417,7 +2446,7 @@ body.lock {
 
 .form__textarea::placeholder {
   font-weight: 400;
-  font-family: "Inter", system-ui !important;
+  font-family: "InterRegular" !important;
   font-size: 14px !important;
   line-height: 120%;
   color: #4c4a4a;

@@ -31,14 +31,35 @@
       }
     }
   }
+  .header__search-close {
+    svg {
+      path {
+        stroke: #aaadb2;
+      }
+    }
+  }
+  .header__search-input {
+    border-bottom: 1px solid $dark-mode-light-grey !important;
+  }
   %menu-dash {
     background-color: $dark-mode-light-grey;
   }
   &.black {
     background: linear-gradient(180deg, #f4f4ef 18.5%, rgba(255, 255, 255, 0) 100%);
 
+    .header__search-close {
+      svg {
+        path {
+          stroke: #4c4a4a;
+        }
+      }
+    }
+
     %menu-dash {
       background-color: $bg-total-dark;
+    }
+    .header__search-input {
+      border-bottom: 1px solid $text-grey !important;
     }
     .header__logo-w {
       display: none;
