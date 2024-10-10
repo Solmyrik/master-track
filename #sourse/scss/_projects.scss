@@ -1,0 +1,211 @@
+.projects {
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 30px;
+      align-items: start;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__triggers {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__trigger {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $text-dark;
+    padding: 8px 15px;
+    border: 1px solid $bg-total-dark;
+    border-radius: 300px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background: $bg-total-dark;
+      color: $text-white;
+    }
+    &.active {
+      background: $bg-total-dark;
+      color: $text-white;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $strock-light-mode;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      padding-bottom: 0;
+      border: none;
+      align-items: start;
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    flex: 0 0 387px;
+    @media (max-width: $tablet) {
+      flex: auto;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @media (max-width: $tablet) {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+
+  &__name {
+    margin-bottom: 30px;
+    @media (max-width: $tablet) {
+      grid-area: 1 / 1 / 2 / 2;
+      margin-bottom: 0;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__decription {
+    margin-bottom: 40px;
+    color: #696b6f;
+    @media (max-width: $tablet) {
+      grid-area: 2 / 1 / 3 / 3;
+      margin-bottom: 0;
+    }
+    @media (max-width: $mobile) {
+      color: $text-grey;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    p {
+      font-weight: 500;
+      font-family: $inter500;
+      font-size: 14px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: $text-dark;
+      white-space: nowrap;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $text-dark;
+      transition: border-bottom 0.3s;
+      display: inline-block;
+      &:hover {
+        border-bottom: 1px solid #f50536;
+      }
+      @media (max-width: $mobile) {
+        border: none;
+        padding-bottom: 0px;
+      }
+    }
+
+    span {
+      display: none;
+    }
+    @media (max-width: $tablet) {
+      grid-area: 1 / 2 / 2 / 3;
+      display: flex;
+      justify-content: end;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: 44px;
+      border-radius: 300px;
+      background: $bg-light;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+      font-weight: 500;
+      font-family: $inter500;
+      font-size: 16px;
+      line-height: 120%;
+      text-transform: uppercase;
+      text-align: center;
+      color: $text-dark;
+      cursor: pointer;
+      transition: all 0.3s;
+      padding: 0px 6px;
+      border: 1px solid $bg-total-dark;
+
+      p {
+        flex: 1 1 auto;
+        text-align: center;
+        padding-left: 14px;
+      }
+      span {
+        transition: all 0.3s;
+        border-radius: 50%;
+        background-color: $bg-light;
+        border: 1px solid $bg-total-dark;
+        cursor: pointer;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 16px;
+          height: 16px;
+          path {
+            transition: all 0.3s;
+          }
+        }
+      }
+
+      font-size: 14px;
+      span {
+        background-color: $bg-total-dark;
+        svg {
+          path {
+            fill: $bg-light;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    flex: 1 1 auto;
+    img {
+      width: 100%;
+    }
+  }
+}

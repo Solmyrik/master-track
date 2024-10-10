@@ -41,9 +41,6 @@ body {
   max-width: 1390px;
   margin: 0 auto;
   padding: 0px 15px;
-  // @media (max-width: $mobile) {
-  //   padding: 0px 10px;
-  // }
 }
 
 @import '_header';
@@ -55,6 +52,7 @@ body {
 @import '_form';
 @import '_common';
 @import '_certificates';
+@import '_projects';
 @import '_footer';
 
 ._anim {
