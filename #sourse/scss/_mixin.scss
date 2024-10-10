@@ -5,6 +5,7 @@ $md1: $mw + 12px;
 $md14: 1040px;
 $tablet: 992px;
 $mobile: 767px;
+$mobile-s: 501px;
 $md4: 479.98px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1500;
@@ -123,6 +124,31 @@ $bg-green: #e0e1dc;
   line-height: 130%;
   text-transform: uppercase;
   color: $text-grey;
+}
+
+._h5 {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: $inter500;
+  line-height: 120%;
+  color: $text-dark;
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+._par-m {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $text-grey;
+  @media (max-width: $tablet) {
+    font-size: 14px;
+  }
+}
+
+._l-gray {
+  color: $text-light-grey;
 }
 
 ._btn {
@@ -266,12 +292,6 @@ $bg-green: #e0e1dc;
   }
 }
 
-._par-m {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  color: $text-grey;
-}
 .none {
   display: none;
 }
