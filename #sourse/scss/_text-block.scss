@@ -21,6 +21,11 @@
       font-weight: 400;
       color: $accent-red;
     }
+    p {
+      transition-delay: 0.1s;
+      span {
+      }
+    }
   }
 }
 

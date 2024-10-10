@@ -52,27 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const introSlider = document.getElementById('intro-slider');
 
   if (introSlider) {
-    // Функция, которая сработает, когда хедер выйдет за пределы intro-slider
-    function handleHeaderExit(entry) {
-      if (entry[0].intersectionRatio === 0) {
-        console.log('Header вышел за пределы intro-slider');
+    window.addEventListener('scroll', (e) => {
+      const heightSreen = window.innerHeight;
+      const scrollY = window.scrollY;
 
+      if (scrollY > heightSreen - 70) {
         header.classList.add('black');
       } else {
-        console.log('Header внутри intro-slider');
         header.classList.remove('black');
       }
-    }
-
-    // Наблюдатель за пересечением
-    const observer = new IntersectionObserver(handleHeaderExit, {
-      root: null, // Это окно просмотра (viewport)
-      threshold: 0, // Срабатывает, когда элемент полностью выйдет за пределы
-      rootMargin: `-${header.offsetHeight}px 0px 0px 0px`, // Отступ сверху, равный высоте хедера
     });
-
-    // Наблюдаем за intro-slider
-    observer.observe(introSlider);
   }
 });
 // главная хедер end
@@ -80,11 +69,31 @@ document.addEventListener('DOMContentLoaded', function () {
 // бургер и меню
 const iconMenu = document.querySelector('.menu-icon');
 const menuBody = document.querySelector('.menu');
+const menuShit = document.querySelector('.menu-shit');
 if (iconMenu) {
+  const header = document.querySelector('.header');
   iconMenu.addEventListener('click', function (e) {
-    document.body.classList.toggle('_lock');
-    iconMenu.classList.toggle('is-open');
-    menuBody.classList.toggle('active');
+    if (menuBody.classList.contains('active')) {
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('is-open');
+      menuBody.classList.toggle('active');
+      setTimeout(() => {
+        menuShit.classList.toggle('active');
+      }, 200);
+      setTimeout(() => {
+        header.classList.toggle('menu-active');
+      }, 200);
+    } else {
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('is-open');
+      setTimeout(() => {
+        menuBody.classList.toggle('active');
+      }, 100);
+      menuShit.classList.toggle('active');
+      setTimeout(() => {
+        header.classList.toggle('menu-active');
+      }, 200);
+    }
   });
 }
 // бургер и меню end
@@ -160,21 +169,39 @@ toTopFooter.addEventListener('click', function () {
   });
 });
 
-// function checkFooterPosition() {
-//   const footer = document.querySelector('footer');
-//   const footerPosition = footer.getBoundingClientRect();
-//   const windowHeight = window.innerHeight;
+// to top end
 
-//   if (windowHeight - footerPosition.top <= 55) {
-//     // Выполнить вашу функцию здесь
-//   } else {
-//     toTop.classList.remove('active');
-//   }
-// }
+//anime
+const animItems = document.querySelectorAll('._anim');
+if (animItems.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
+  function animOnScroll() {
+    for (let i = 0; i < animItems.length; i++) {
+      const animItem = animItems[i];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = offset(animItem).top;
+      const animStart = 4;
 
-// // Обработчик события прокрутки страницы
-// window.addEventListener('scroll', checkFooterPosition);
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
 
-// // Вызвать функцию при загрузке страницы для начальной проверки
-// window.addEventListener('load', checkFooterPosition);
-// // to top end
+      if (
+        pageYOffset > animItemOffset - animItemPoint &&
+        pageYOffset < animItemOffset + animItemHeight
+      ) {
+        animItem.classList.add('_active');
+      }
+    }
+  }
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+  }
+  animOnScroll();
+}
+
+//anime end

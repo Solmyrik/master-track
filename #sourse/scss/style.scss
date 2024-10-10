@@ -54,3 +54,15 @@ body {
 @import '_intro-slider';
 @import '_form';
 @import '_footer';
+
+._anim {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all 1s;
+}
+._anim {
+  &._active {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

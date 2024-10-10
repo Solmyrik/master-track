@@ -133,7 +133,6 @@ $bg-green: #e0e1dc;
   position: relative;
   display: flex;
   align-items: center;
-  // justify-content: center;
   padding-left: 40px;
   font-weight: 500;
   font-family: $inter500;
@@ -144,6 +143,7 @@ $bg-green: #e0e1dc;
   color: $text-dark;
   cursor: pointer;
   transition: all 0.3s;
+  padding: 0px 6px;
   &:hover {
     span {
       background-color: $bg-total-dark;
@@ -154,12 +154,13 @@ $bg-green: #e0e1dc;
       }
     }
   }
+  p {
+    flex: 1 1 auto;
+    text-align: center;
+    padding-left: 14px;
+  }
   span {
     transition: all 0.3s;
-    position: absolute;
-    right: 6px;
-    top: 6px;
-    // padding: 9px;
     border-radius: 50%;
     background-color: $bg-light;
     border: 1px solid $bg-total-dark;
@@ -209,22 +210,29 @@ $bg-green: #e0e1dc;
   cursor: pointer;
   position: relative;
   transition: opacity 0.3s;
+  padding: 0px 6px;
   &:hover {
     opacity: 0.9;
   }
+  p {
+    flex: 1 1 auto;
+    text-align: center;
+    padding-left: 14px;
+  }
   span {
-    position: absolute;
-    right: 10px;
-    top: 7px;
-    padding: 9px;
     border-radius: 50%;
     background-color: $bg-light;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 34px;
+    width: 34px;
+    flex: 0 0 34px;
     @media (max-width: $mobile) {
       top: 5px;
       height: 32px;
       width: 32px;
+      flex: 0 0 32px;
       display: flex;
       align-items: center;
       justify-content: center;

@@ -11,6 +11,7 @@ if (levelSliderContainer) {
         spaceBetween: 30,
       },
     },
+    touchEventsTarget: 'container',
   });
 }
 
