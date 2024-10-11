@@ -1438,6 +1438,16 @@ body.lock {
   }
 }
 
+@media (max-width: 767px) {
+  .brand__content._anim {
+    transform: translate(-50px, 30px) !important;
+  }
+}
+@media (max-width: 767px) {
+  .brand__content._anim._active {
+    transform: translate(-50px, 0px) !important;
+  }
+}
 .level {
   padding-bottom: 32px;
 }
