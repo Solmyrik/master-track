@@ -1,0 +1,73 @@
+.map {
+  &__container {
+  }
+
+  &__map {
+    height: 500px;
+    width: 100%;
+    @media (max-width: $tablet) {
+      height: 400px;
+    }
+    @media (max-width: $mobile) {
+      height: 382px;
+    }
+  }
+
+  &__body {
+    margin-top: 40px;
+    display: flex;
+    gap: 100px;
+    @media (max-width: 1245px) {
+      gap: 50px;
+    }
+    @media (max-width: $tablet) {
+      // justify-content: space-between;
+      // gap: 10px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__column {
+    @media (max-width: $tablet) {
+      max-width: 220px;
+    }
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: $text-dark;
+    font-family: $noto;
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: $text-grey;
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+}
