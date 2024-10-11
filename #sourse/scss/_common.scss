@@ -20,5 +20,17 @@
   }
 
   &__arrow {
+    svg {
+      path {
+        stroke: #aaadb2;
+      }
+    }
+    &:last-of-type {
+      svg {
+        path {
+          stroke: #2e2d2d;
+        }
+      }
+    }
   }
 }

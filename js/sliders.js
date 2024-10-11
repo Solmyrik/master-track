@@ -32,3 +32,47 @@ if (introSliderContainer) {
     },
   });
 }
+
+// слайдер на карточки проектов
+const projectSliderContainer = document.querySelector('.project__block');
+if (projectSliderContainer) {
+  const projectSlider = new Swiper('.project__block', {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    allowTouchMove: false,
+    mousewheel: false,
+    navigation: {
+      prevEl: '.pagination-project-prev',
+      nextEl: '.pagination-project-next',
+    },
+    breakpoints: {
+      320: { slidesPerView: 'auto' },
+      767: { slidesPerView: 1 },
+    },
+  });
+}
+// слайдер для ленты проектов
+const productFeedSliderContainer = document.querySelector('.product-feed__body');
+if (productFeedSliderContainer) {
+  const productFeedSSlider = new Swiper('.product-feed__body', {
+    slidesPerView: 5,
+    spaceBetween: 29,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 18,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 18,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 29,
+      },
+      1250: {
+        slidesPerView: 5,
+      },
+    },
+  });
+}

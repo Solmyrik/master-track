@@ -1,0 +1,119 @@
+.project {
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    gap: 30px;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &__left {
+    flex: 0 0 387px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: $tablet) {
+      gap: 0;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    p {
+      color: #696b6f;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__pagination {
+  }
+
+  &__right {
+    overflow: hidden;
+    //  flex: 1 1 auto;
+  }
+
+  &__block {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  &__slider {
+    flex: 0 0 100%;
+    img {
+      width: 100%;
+    }
+    @media (max-width: $mobile) {
+      flex: 0 0 370px;
+    }
+    @media (max-width: 425px) {
+      flex: 0 0 340px;
+    }
+    @media (max-width: 390px) {
+      flex: 0 0 300px;
+    }
+  }
+}
+.project__pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  @media (max-width: $tablet) {
+    justify-content: flex-end;
+  }
+}
+.pagination-project {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $strock-dark-mode;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+  svg {
+    path {
+      transition: all 0.3s;
+    }
+  }
+  &:hover {
+    background-color: $bg-total-dark;
+    border: 1px solid $bg-total-dark;
+    svg {
+      path {
+        fill: #f4f4ef;
+      }
+    }
+  }
+  @media (max-width: $tablet) {
+    height: 33px;
+  }
+  @media (max-width: $tablet) {
+    width: 85px;
+  }
+}
+.pagination-project-prev {
+}
+.pagination-project-next {
+}
