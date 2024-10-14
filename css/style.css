@@ -1252,6 +1252,20 @@ body.lock {
   }
 }
 
+@media (max-width: 992px) {
+  .text-block-mobile._anim {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-block-mobile._anim._active {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+  }
+}
+
 .our__title {
   margin-bottom: 50px;
 }
@@ -3292,7 +3306,7 @@ body.lock {
 }
 @media (max-width: 1390px) {
   .error__decor {
-    font-size: 18vw;
+    font-size: 17.7vw;
   }
 }
 

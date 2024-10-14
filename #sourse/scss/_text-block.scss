@@ -53,3 +53,16 @@
     text-align: right;
   }
 }
+
+.text-block-mobile._anim {
+  @media (max-width: $tablet) {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+  }
+}
+.text-block-mobile._anim._active {
+  @media (max-width: $tablet) {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+  }
+}
