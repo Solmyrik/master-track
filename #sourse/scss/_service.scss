@@ -1,0 +1,197 @@
+.services {
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 50px;
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    width: 417px;
+    @media (max-width: $tablet) {
+      width: 266px;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: $text-dark;
+    font-family: $noto;
+    max-width: 430px;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      max-width: 100%;
+    }
+  }
+}
+
+.faq {
+  &__items {
+    flex: 0 1 80%;
+  }
+
+  &__item {
+    padding: 30px 0px;
+    border-bottom: 1px solid #2d220b;
+    &:first-of-type {
+      border-top: 1px solid #2d220b;
+    }
+    @media (max-width: $mobile) {
+      padding: 20px 0px;
+    }
+  }
+
+  &__label {
+    padding-right: 60px;
+    font-weight: 500;
+    line-height: 120%;
+    color: $text-dark;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      right: 0px;
+      top: 50%;
+      content: '';
+      position: absolute;
+      width: 16px;
+      background-color: #2e2d2d;
+      height: 1.5px;
+      transition: all 0.5s;
+      @media (max-width: $mobile) {
+        width: 24px;
+      }
+    }
+    @media (max-width: $mobile) {
+      padding-right: 10px;
+    }
+    &::after {
+      right: 0px;
+      top: 50%;
+      content: '';
+      position: absolute;
+      width: 16px;
+      background-color: #2e2d2d;
+      height: 1.5px;
+      transform: rotate(-90deg);
+      transition: all 0.5s;
+      @media (max-width: $mobile) {
+        width: 24px;
+      }
+    }
+    p {
+      font-size: 20px;
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+    }
+    span {
+      font-size: 18px;
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+      @media (max-width: $mobile) {
+        font-size: 14px;
+        font-family: $inter;
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        &::before,
+        &::after {
+          background-color: $accent-red;
+        }
+        .faq__titles {
+          p {
+            color: $accent-red;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+
+    &.active {
+      .faq__titles {
+        p {
+          color: $accent-red;
+          padding-left: 30px;
+        }
+      }
+      &::before,
+      &::after {
+        background-color: $accent-red;
+      }
+      &::after {
+        transform: rotate(0deg);
+      }
+      @media (max-width: $mobile) {
+        .faq__titles {
+          span {
+            padding-left: 30px;
+          }
+        }
+        .faq__content {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  &__titles {
+    display: flex;
+    font-family: $inter500;
+    p {
+      width: 417px;
+      transition: all 0.3s;
+      @media (max-width: $tablet) {
+        width: 266px;
+      }
+    }
+    span {
+      transition: all 0.3s;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #2d220b;
+    margin-left: 417px;
+    max-width: 530px;
+    transition: all 0.5s;
+    &.active {
+      margin-top: 30px;
+      @media (max-width: $mobile) {
+        margin-top: 20px;
+      }
+    }
+    @media (max-width: $tablet) {
+      margin-left: 266px;
+    }
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      font-size: 14px;
+      color: $text-dark;
+      max-width: 100%;
+      margin-left: 30px;
+    }
+  }
+}

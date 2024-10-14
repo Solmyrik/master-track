@@ -89,6 +89,12 @@ $bg-green: #e0e1dc;
     margin-bottom: 70px;
   }
 }
+._margin-s {
+  margin-bottom: 50px;
+  @media (max-width: $mobile) {
+    margin-bottom: 70px;
+  }
+}
 
 ._h2 {
   font-family: $noto;
@@ -411,6 +417,28 @@ $bg-green: #e0e1dc;
     }
   }
 }
-.scrolling-text {
+.scrolling-text,
+.scrolling-text-about {
   transition: all 0.1s;
+}
+
+.only-pc {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.only-tablet {
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.only-mobile {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+  }
 }

@@ -8,6 +8,11 @@
     @media (max-width: $tablet) {
       border-bottom: 1px solid $text-dark;
     }
+    &._h2 {
+      @media (max-width: $mobile) {
+        border: none;
+      }
+    }
   }
 
   &__wrapper {

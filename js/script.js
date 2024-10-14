@@ -207,3 +207,26 @@ if (animItems.length > 0) {
 }
 
 //anime end
+
+// аккордеоны
+const faqItem = document.querySelectorAll('.faq__label');
+
+if (faqItem && faqItem.length) {
+  faqItem.forEach((e) => {
+    e.addEventListener('click', feqHandler);
+  });
+  function feqHandler(e) {
+    e.preventDefault();
+    currentContent = e.currentTarget.nextElementSibling;
+    e.currentTarget.classList.toggle('active');
+    if (e.currentTarget.classList.contains('active')) {
+      currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
+      currentContent.classList.add('active');
+    } else {
+      currentContent.style.maxHeight = 0;
+      currentContent.classList.remove('active');
+    }
+  }
+}
+
+// аккордеоны end
