@@ -1,4 +1,5 @@
 function decorAnimation(scrollingText) {
+  if (!scrollingText) return;
   let leftPosition = 0;
   let isInViewport = false;
   let lastScrollTop = 0;

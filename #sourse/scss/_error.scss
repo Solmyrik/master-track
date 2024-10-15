@@ -4,6 +4,18 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  @media (max-width: $mobile) {
+    margin-top: 132px;
+  }
+  &.search-not {
+    margin-top: 60px;
+    @media (max-width: $tablet) {
+      margin-top: 25px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 100px;
+    }
+  }
 
   &__container {
     display: flex;
@@ -20,6 +32,12 @@
     text-align: center;
     @media (max-width: $mobile) {
       width: 288px;
+    }
+    &_search {
+      max-width: 348px;
+      @media (max-width: $tablet) {
+        max-width: 283px;
+      }
     }
   }
 
@@ -55,7 +73,8 @@
     bottom: 0;
     z-index: -1;
     @media (max-width: $laptop) {
-      font-size: 17.7vw;
+      left: 16px;
+      font-size: 17.2vw;
     }
   }
 }

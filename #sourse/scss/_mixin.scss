@@ -271,8 +271,13 @@ $bg-green: #e0e1dc;
     }
   }
   @media (max-width: $mobile) {
+    background: $bg-dark;
+    width: 282px;
     height: 44px;
     font-size: 14px;
+    p {
+      text-align: left;
+    }
   }
 }
 

@@ -129,6 +129,91 @@ if (searchInput) {
 }
 // header__search end
 
+// функционал поиск (в будущем вырезать)
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(null, args);
+    }, delay);
+  };
+};
+
+const handleSearch = (e) => {
+  const productContainer = document.querySelector('.search-product-items');
+  const projectContainer = document.querySelector('.search-project-items');
+  const notContainer = document.querySelector('.search-not');
+  const productItems = document.querySelectorAll('.product-feed__slide');
+  const projectItems = document.querySelectorAll('.level__item');
+
+  rezetSearch();
+
+  const value = e.target.value.trim().toLowerCase();
+
+  if (value.length < 1) {
+    rezetSearch();
+    notContainer.classList.add('active');
+    return;
+  }
+  let productQuantity = 0;
+  let projectQuantity = 0;
+
+  productItems.forEach((productItem, i) => {
+    const title = productItem.querySelector('.product-feed__name').textContent.toLowerCase();
+    const description = productItem
+      .querySelector('.product-feed__description')
+      .textContent.toLowerCase();
+
+    if (title.includes(value) || description.includes(value)) {
+      productQuantity++;
+      productItem.classList.add('active');
+    }
+  });
+
+  projectItems.forEach((projectItem, i) => {
+    const title = projectItem.querySelector('.footer-level__title').textContent.toLowerCase();
+    const description = projectItem.querySelector('.footer-level__par').textContent.toLowerCase();
+
+    if (title.includes(value) || description.includes(value)) {
+      projectQuantity++;
+      projectItem.classList.add('active');
+      console.log(productQuantity);
+    }
+  });
+
+  if (productQuantity) {
+    productContainer.classList.add('active');
+  }
+  if (projectQuantity) {
+    projectContainer.classList.add('active');
+  }
+
+  if (productQuantity || projectQuantity) {
+    notContainer.classList.remove('active');
+  } else {
+    notContainer.classList.add('active');
+  }
+
+  function rezetSearch() {
+    productContainer.classList.remove('active');
+    projectContainer.classList.remove('active');
+    notContainer.classList.remove('active');
+    productItems.forEach((productItem, i) => {
+      productItem.classList.remove('active');
+    });
+    projectItems.forEach((projectItem, i) => {
+      projectItem.classList.remove('active');
+    });
+  }
+};
+
+const input = document.querySelector('.header-search-input');
+const inputMob = document.querySelector('.header-search-input-mobile');
+input.addEventListener('input', debounce(handleSearch, 600));
+inputMob.addEventListener('input', debounce(handleSearch, 600));
+// функционал поиск (в будущем вырезать) end
+
 // to top
 
 let toTop = document.querySelector('.to-top');
