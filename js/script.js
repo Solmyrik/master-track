@@ -210,8 +210,11 @@ const handleSearch = (e) => {
 
 const input = document.querySelector('.header-search-input');
 const inputMob = document.querySelector('.header-search-input-mobile');
-input.addEventListener('input', debounce(handleSearch, 600));
-inputMob.addEventListener('input', debounce(handleSearch, 600));
+if (inputMob) {
+  input.addEventListener('input', debounce(handleSearch, 600));
+  inputMob.addEventListener('input', debounce(handleSearch, 600));
+}
+
 // функционал поиск (в будущем вырезать) end
 
 // to top
