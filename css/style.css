@@ -3395,6 +3395,26 @@ body.lock {
 .error__btn {
   margin: 0 auto;
 }
+.error__order {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #2e2d2d;
+  font-family: "InterMedium";
+  margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+  .error__order {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .error__order {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
 .error__decor {
   font-weight: 400;
   font-family: "Noto Sans Display Condensed";

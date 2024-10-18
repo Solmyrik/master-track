@@ -318,3 +318,16 @@ if (faqItem && faqItem.length) {
 }
 
 // аккордеоны end
+
+// дата для страницы спасибо
+const orderDate = document.querySelector('.order-date');
+if (orderDate) {
+  const currentDate = new Date();
+
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const year = currentDate.getFullYear();
+
+  orderDate.textContent = `Ваш заказ №01/${day}.${month}.${year}`;
+}
+// дата для страницы спасибо end

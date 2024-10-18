@@ -58,6 +58,22 @@
   &__btn {
     margin: 0 auto;
   }
+  &__order {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: $text-dark;
+    font-family: $inter500;
+    margin-bottom: 40px;
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
 
   &__decor {
     font-weight: 400;
