@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="js/sliders.js"></script>
+    <script defer src="js/cart.js"></script>
     <script defer src="js/script.js"></script>
   </head>
   <body>
@@ -86,6 +87,7 @@
                       fill="#4C4A4A"
                     />
                   </svg>
+                  <div class="header__cart-quantity">3</div>
                 </div>
               </div>
               <div class="header__info">
@@ -152,15 +154,368 @@
         <div class="menu-shit"></div>
       </header>
       <main class="main">
-        <section class="cart _margin-b">
+        <section class="cart-none _margin-b">
+          <div class="cart-none__container">
+            <div class="cart-none__top">
+              <div class="cart-none__left">
+                <h2 class="cart-none__title _h2">Ваш заказ</h2>
+                <p class="_par-m">
+                  Кажется, вы пока не выбрали ни один товар. Перейдтие в каталог или вернитесь на
+                  главную страницу.
+                </p>
+              </div>
+              <div class="cart-none__right">
+                <a href="" class="cart-none__link _btn-link only-pc only-tablet"
+                  >вернуться на главную</a
+                >
+              </div>
+            </div>
+            <div class="cart-none__body">
+              <div class="cart-none__name">Наша продукция</div>
+              <div class="our__body">
+                <div class="our__left">
+                  <div class="our__small-img">
+                    <img src="img/our/1/1.jpg" alt="product" />
+                  </div>
+                  <div class="our__big-img">
+                    <img src="img/our/1/2.jpg" alt="product" />
+                  </div>
+                </div>
+                <div class="our__right">
+                  <nav class="our__menu">
+                    <ul class="our__list">
+                      <li class="our__item">
+                        <a data-our="1" href="" class="our__link active"
+                          ><span>Встраиваемые светильники</span
+                          ><svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 1H13.75C13.75 0.585786 13.4142 0.25 13 0.25V1ZM0.46967 12.4697C0.176777 12.7626 0.176777 13.2374 0.46967 13.5303C0.762563 13.8232 1.23744 13.8232 1.53033 13.5303L0.46967 12.4697ZM12.4697 0.46967L0.46967 12.4697L1.53033 13.5303L13.5303 1.53033L12.4697 0.46967ZM13 0.25H1V1.75H13V0.25ZM12.25 1V13H13.75V1H12.25Z"
+                              fill="#AAADB2"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="our__item">
+                        <a data-our="2" href="" class="our__link"
+                          ><span>Трековые светильники</span
+                          ><svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 1H13.75C13.75 0.585786 13.4142 0.25 13 0.25V1ZM0.46967 12.4697C0.176777 12.7626 0.176777 13.2374 0.46967 13.5303C0.762563 13.8232 1.23744 13.8232 1.53033 13.5303L0.46967 12.4697ZM12.4697 0.46967L0.46967 12.4697L1.53033 13.5303L13.5303 1.53033L12.4697 0.46967ZM13 0.25H1V1.75H13V0.25ZM12.25 1V13H13.75V1H12.25Z"
+                              fill="#AAADB2"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="our__item">
+                        <a data-our="3" href="" class="our__link"
+                          ><span>Шинопровод для светильников</span
+                          ><svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 1H13.75C13.75 0.585786 13.4142 0.25 13 0.25V1ZM0.46967 12.4697C0.176777 12.7626 0.176777 13.2374 0.46967 13.5303C0.762563 13.8232 1.23744 13.8232 1.53033 13.5303L0.46967 12.4697ZM12.4697 0.46967L0.46967 12.4697L1.53033 13.5303L13.5303 1.53033L12.4697 0.46967ZM13 0.25H1V1.75H13V0.25ZM12.25 1V13H13.75V1H12.25Z"
+                              fill="#AAADB2"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="our__item">
+                        <a data-our="4" href="" class="our__link"
+                          ><span>Комплектующие к шинопроводу</span
+                          ><svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 1H13.75C13.75 0.585786 13.4142 0.25 13 0.25V1ZM0.46967 12.4697C0.176777 12.7626 0.176777 13.2374 0.46967 13.5303C0.762563 13.8232 1.23744 13.8232 1.53033 13.5303L0.46967 12.4697ZM12.4697 0.46967L0.46967 12.4697L1.53033 13.5303L13.5303 1.53033L12.4697 0.46967ZM13 0.25H1V1.75H13V0.25ZM12.25 1V13H13.75V1H12.25Z"
+                              fill="#AAADB2"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <a class="our__button _btn-big">
+                <p>Перейти в каталог</p>
+                <span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 1H15.75C15.75 0.585786 15.4142 0.25 15 0.25V1ZM0.46967 14.4697C0.176777 14.7626 0.176777 15.2374 0.46967 15.5303C0.762563 15.8232 1.23744 15.8232 1.53033 15.5303L0.46967 14.4697ZM14.4697 0.46967L0.46967 14.4697L1.53033 15.5303L15.5303 1.53033L14.4697 0.46967ZM15 0.25H1V1.75H15V0.25ZM14.25 1V15H15.75V1H14.25Z"
+                      fill="#2E2D2D"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <div class="only-mobile">
+                <a style="margin-top: 10px" class="_btn-big-secondary">
+                  <p>вернуться на главную</p>
+                  <span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 1H15.75C15.75 0.585786 15.4142 0.25 15 0.25V1ZM0.46967 14.4697C0.176777 14.7626 0.176777 15.2374 0.46967 15.5303C0.762563 15.8232 1.23744 15.8232 1.53033 15.5303L0.46967 14.4697ZM14.4697 0.46967L0.46967 14.4697L1.53033 15.5303L15.5303 1.53033L14.4697 0.46967ZM15 0.25H1V1.75H15V0.25ZM14.25 1V15H15.75V1H14.25Z"
+                        fill="#F4F4EF"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cart _margin-b active">
           <div class="cart__container">
             <h2 class="cart__title _h2">Ваш заказ</h2>
             <div class="cart__table table-cart">
               <div class="table-cart__top">
-                <p class="table-cart__label">Продукция</p>
-                <p class="table-cart__label">Артикул</p>
-                <p class="table-cart__label">Количество</p>
-                <p class="table-cart__label">Цена</p>
+                <div class="table-cart__top_left">
+                  <p class="table-cart__label">Продукция</p>
+                  <p class="table-cart__label">Артикул</p>
+                </div>
+                <div class="table-cart__top_right">
+                  <p class="table-cart__label">Количество</p>
+                  <p class="table-cart__label">Цена</p>
+                </div>
+              </div>
+              <div class="table-cart__body">
+                <div data-cart-item="1" class="table-cart__item">
+                  <div class="table-cart__left">
+                    <div class="table-cart__img">
+                      <img src="img/product-feed/proto.jpg" alt="" />
+                    </div>
+                    <div class="table-cart__values">
+                      <div class="table-cart__desciption">
+                        <h6 class="table-cart__name">
+                          Токоподвод левый, белый, Master Track 30 Вт, 3000К, CRI 90, белый, 15°,
+                          Master Track
+                        </h6>
+                        <button class="table-cart__delete">
+                          <span>Удалить</span>
+                          <svg
+                            width="13"
+                            height="12"
+                            viewBox="0 0 13 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 0.5L12 11.5M12 0.5L1.55 11.5"
+                              stroke="#2E2D2D"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="table-cart__article">MT3F-11-WH</div>
+                    </div>
+                  </div>
+
+                  <div class="table-cart__right">
+                    <div class="table-cart__counter counter">
+                      <button class="counter__decrement decrement">
+                        <span class="decrement"></span>
+                      </button>
+                      <span data-counter-value="1" class="counter__value">1</span>
+                      <button class="counter__increment increment">
+                        <span class="increment"></span>
+                      </button>
+                    </div>
+                    <div class="table-cart__price">по запросу</div>
+                  </div>
+                </div>
+                <div data-cart-item="2" class="table-cart__item">
+                  <div class="table-cart__left">
+                    <div class="table-cart__img">
+                      <img src="img/product-feed/proto.jpg" alt="" />
+                    </div>
+                    <div class="table-cart__values">
+                      <div class="table-cart__desciption">
+                        <h6 class="table-cart__name">
+                          Трековый светильник, Bonilux, 3000К, CRI 90, белый, 15°
+                        </h6>
+                        <button class="table-cart__delete">
+                          <span>Удалить</span>
+                          <svg
+                            width="13"
+                            height="12"
+                            viewBox="0 0 13 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 0.5L12 11.5M12 0.5L1.55 11.5"
+                              stroke="#2E2D2D"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="table-cart__article">MT-BL-TS-30W-3000-90-WH 15</div>
+                    </div>
+                  </div>
+
+                  <div class="table-cart__right">
+                    <div class="table-cart__counter counter">
+                      <button class="counter__decrement decrement">
+                        <span class="decrement"></span>
+                      </button>
+                      <span data-counter-value="2" class="counter__value">1</span>
+                      <button class="counter__increment increment">
+                        <span class="increment"></span>
+                      </button>
+                    </div>
+                    <div class="table-cart__price">по запросу</div>
+                  </div>
+                </div>
+                <div data-cart-item="3" class="table-cart__item">
+                  <div class="table-cart__left">
+                    <div class="table-cart__img">
+                      <img src="img/product-feed/proto.jpg" alt="" />
+                    </div>
+                    <div class="table-cart__values">
+                      <div class="table-cart__desciption">
+                        <h6 class="table-cart__name">
+                          Токоподвод левый, белый, Master Track, 30 Вт, 3000К, CRI 90, белый, 15°,
+                          Master Track
+                        </h6>
+                        <button class="table-cart__delete">
+                          <span>Удалить</span>
+                          <svg
+                            width="13"
+                            height="12"
+                            viewBox="0 0 13 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 0.5L12 11.5M12 0.5L1.55 11.5"
+                              stroke="#2E2D2D"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="table-cart__article">MT-BL-TS-30W-3000-90-WH 17</div>
+                    </div>
+                  </div>
+
+                  <div class="table-cart__right">
+                    <div class="table-cart__counter counter">
+                      <button class="counter__decrement decrement">
+                        <span class="decrement"></span>
+                      </button>
+                      <span data-counter-value="3" class="counter__value">1</span>
+                      <button class="counter__increment increment">
+                        <span class="increment"></span>
+                      </button>
+                    </div>
+                    <div class="table-cart__price">по запросу</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart__cost">
+              <p>Стоимость заказа:</p>
+              <span>По запросу</span>
+            </div>
+            <div class="form">
+              <div class="form__container">
+                <div class="form__body">
+                  <h2 class="form__title _h2 _anim">ваши контакты</h2>
+                  <form action="" class="form__form">
+                    <div class="form__top">
+                      <input class="form__input" type="text" placeholder="Имя*" />
+                      <input class="form__input" type="tel" placeholder="Ваш телефон*" />
+                      <input
+                        class="form__input"
+                        type="text"
+                        placeholder="Ваша электронная почта*"
+                      />
+                      <div class="custom-file-upload">
+                        <label for="fileInput">
+                          <p id="fileName">Прикрепить файл</p>
+                          <svg
+                            width="8"
+                            height="17"
+                            viewBox="0 0 8 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0.0664062 2.83333C0.0664063 2.08189 0.364917 1.36122 0.89627 0.829864C1.42762 0.298511 2.14829 0 2.89974 0C3.65119 0 4.37186 0.298511 4.90321 0.829864C5.43456 1.36122 5.73307 2.08189 5.73307 2.83333V13.0333C5.73307 13.4842 5.55397 13.9166 5.23515 14.2354C4.91634 14.5542 4.48394 14.7333 4.03307 14.7333C3.5822 14.7333 3.1498 14.5542 2.83099 14.2354C2.51218 13.9166 2.33307 13.4842 2.33307 13.0333V5.1C2.33307 4.94971 2.39278 4.80558 2.49905 4.69931C2.60532 4.59304 2.74945 4.53333 2.89974 4.53333C3.05003 4.53333 3.19416 4.59304 3.30043 4.69931C3.4067 4.80558 3.46641 4.94971 3.46641 5.1V13.0333C3.46641 13.1836 3.52611 13.3278 3.63238 13.434C3.73865 13.5403 3.88278 13.6 4.03307 13.6C4.18336 13.6 4.3275 13.5403 4.43377 13.434C4.54004 13.3278 4.59974 13.1836 4.59974 13.0333V2.83333C4.59974 2.61009 4.55577 2.38902 4.47034 2.18277C4.3849 1.97652 4.25968 1.78911 4.10182 1.63125C3.94396 1.47339 3.75656 1.34817 3.5503 1.26274C3.34405 1.17731 3.12299 1.13333 2.89974 1.13333C2.67649 1.13333 2.45543 1.17731 2.24918 1.26274C2.04292 1.34817 1.85552 1.47339 1.69766 1.63125C1.5398 1.78911 1.41458 1.97652 1.32914 2.18277C1.24371 2.38902 1.19974 2.61009 1.19974 2.83333V13.0333C1.19974 13.7848 1.49825 14.5054 2.0296 15.0368C2.56096 15.5682 3.28163 15.8667 4.03307 15.8667C4.78452 15.8667 5.50519 15.5682 6.03654 15.0368C6.5679 14.5054 6.86641 13.7848 6.86641 13.0333V5.1C6.86641 4.94971 6.92611 4.80558 7.03238 4.69931C7.13865 4.59304 7.28278 4.53333 7.43307 4.53333C7.58336 4.53333 7.7275 4.59304 7.83377 4.69931C7.94004 4.80558 7.99974 4.94971 7.99974 5.1V13.0333C7.99974 14.0854 7.58182 15.0943 6.83793 15.8382C6.09404 16.5821 5.0851 17 4.03307 17C2.98105 17 1.97211 16.5821 1.22822 15.8382C0.484322 15.0943 0.0664062 14.0854 0.0664062 13.0333V2.83333Z"
+                              fill="#2E2D2D"
+                            />
+                          </svg>
+                        </label>
+                        <input type="file" id="fileInput" />
+                      </div>
+                    </div>
+                    <textarea
+                      class="form__textarea"
+                      placeholder="Расскажите подробнее о вашем проекте"
+                    ></textarea>
+                    <label class="form__check _label-wallet">
+                      <input class="_checkbox-wallet" type="checkbox" />
+                      <span class="_fake-wallet"></span>
+                      <span class="_wallet-chectext"
+                        >Я согласен на хранение и&nbsp;обработку моих персональных данных
+                      </span>
+                    </label>
+                    <a class="form__button _btn-big">
+                      <p>подтвердить заказ</p>
+                      <span>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15 1H15.75C15.75 0.585786 15.4142 0.25 15 0.25V1ZM0.46967 14.4697C0.176777 14.7626 0.176777 15.2374 0.46967 15.5303C0.762563 15.8232 1.23744 15.8232 1.53033 15.5303L0.46967 14.4697ZM14.4697 0.46967L0.46967 14.4697L1.53033 15.5303L15.5303 1.53033L14.4697 0.46967ZM15 0.25H1V1.75H15V0.25ZM14.25 1V15H15.75V1H14.25Z"
+                            fill="#2E2D2D"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -258,6 +613,162 @@
           fill="#2E2D2D"
         />
       </svg>
+    </div>
+    <div class="cart-popap">
+      <div class="cart-popap__wrapper">
+        <div class="cart-popap__body">
+          <div class="cart-popap__body-wrapper">
+            <div class="cart-popap__top">
+              <h2 class="cart-popap__title _h2">Ваш заказ</h2>
+              <button class="cart-popap__close">
+                <img src="img/icons/close.svg" alt="close" />
+              </button>
+            </div>
+            <div class="cart-popap__items">
+              <article data-cart-item="1" class="cart-popap__item">
+                <div class="cart-popap__left">
+                  <div class="cart-popap__img">
+                    <img src="img/product-feed/proto.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="cart-popap__right">
+                  <div class="cart-popap__article">MT3F-11-WH</div>
+                  <div class="cart-popap__name">Токоподвод левый, белый Master Track</div>
+                  <p class="cart-popap__decrition">
+                    30 Вт, 3000К, CRI 90, белый, 15°, Master Track
+                  </p>
+                  <div class="cart-popap__bottom">
+                    <div class="cart-popap__counter counter">
+                      <button class="counter__decrement decrement">
+                        <span class="decrement"></span>
+                      </button>
+                      <span data-counter-value="1" class="counter__value">1</span>
+                      <button class="counter__increment increment">
+                        <span class="increment"></span>
+                      </button>
+                    </div>
+                    <button class="cart-popap__delete">
+                      <span>Удалить</span>
+                      <svg
+                        width="13"
+                        height="12"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 0.5L12 11.5M12 0.5L1.55 11.5"
+                          stroke="#2E2D2D"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article data-cart-item="2" class="cart-popap__item">
+                <div class="cart-popap__left">
+                  <div class="cart-popap__img">
+                    <img src="img/product-feed/proto.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="cart-popap__right">
+                  <div class="cart-popap__article">MT-BL-TS-30W-3000-90-WH 15</div>
+                  <div class="cart-popap__name">Токоподвод левый, белый Master Track</div>
+                  <p class="cart-popap__decrition">
+                    30 Вт, 3000К, CRI 90, белый, 15°, Master Track
+                  </p>
+                  <div class="cart-popap__bottom">
+                    <div class="cart-popap__counter counter">
+                      <button class="counter__decrement decrement">
+                        <span class="decrement"></span>
+                      </button>
+                      <span data-counter-value="2" class="counter__value">1</span>
+                      <button class="counter__increment increment">
+                        <span class="increment"></span>
+                      </button>
+                    </div>
+                    <button class="cart-popap__delete">
+                      <span>Удалить</span>
+                      <svg
+                        width="13"
+                        height="12"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 0.5L12 11.5M12 0.5L1.55 11.5"
+                          stroke="#2E2D2D"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article data-cart-item="3" class="cart-popap__item">
+                <div class="cart-popap__left">
+                  <div class="cart-popap__img">
+                    <img src="img/product-feed/proto.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="cart-popap__right">
+                  <div class="cart-popap__article">MT-BL-TS-30W-3000-90-WH 17</div>
+                  <div class="cart-popap__name">Токоподвод левый, белый Master Track</div>
+                  <p class="cart-popap__decrition">
+                    30 Вт, 3000К, CRI 90, белый, 15°, Master Track
+                  </p>
+                  <div class="cart-popap__bottom">
+                    <div class="cart-popap__counter counter">
+                      <button class="counter__decrement decrement">
+                        <span class="decrement"></span>
+                      </button>
+                      <span data-counter-value="3" class="counter__value">1</span>
+                      <button class="counter__increment increment">
+                        <span class="increment"></span>
+                      </button>
+                    </div>
+                    <button class="cart-popap__delete">
+                      <span>Удалить</span>
+                      <svg
+                        width="13"
+                        height="12"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 0.5L12 11.5M12 0.5L1.55 11.5"
+                          stroke="#2E2D2D"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <a class="_btn-big cart-popap__button">
+              <p>оформить заказ</p>
+              <span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 1H15.75C15.75 0.585786 15.4142 0.25 15 0.25V1ZM0.46967 14.4697C0.176777 14.7626 0.176777 15.2374 0.46967 15.5303C0.762563 15.8232 1.23744 15.8232 1.53033 15.5303L0.46967 14.4697ZM14.4697 0.46967L0.46967 14.4697L1.53033 15.5303L15.5303 1.53033L14.4697 0.46967ZM15 0.25H1V1.75H15V0.25ZM14.25 1V15H15.75V1H14.25Z"
+                    fill="#2E2D2D"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

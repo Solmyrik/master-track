@@ -251,6 +251,23 @@
 
   &__cart {
     cursor: pointer;
+    position: relative;
+  }
+  &__cart-quantity {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    background-color: $text-grey;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 120%;
+    color: $text-white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__info {
