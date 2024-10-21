@@ -287,6 +287,11 @@
     @media (max-width: 1120px) {
       font-size: 14px;
     }
+    @media (max-width: $mobile) {
+      span {
+        display: inline;
+      }
+    }
   }
 }
 .counter {
@@ -418,25 +423,9 @@
   }
 
   &__name {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 120%;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: $text-dark;
-    font-family: $noto;
     margin-bottom: 50px;
     @media (max-width: $tablet) {
-      font-size: 32px;
       margin-bottom: 30px;
-    }
-    @media (max-width: $mobile) {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 130%;
-      text-transform: uppercase;
-      color: $text-grey;
-      font-family: $inter500;
     }
   }
 }

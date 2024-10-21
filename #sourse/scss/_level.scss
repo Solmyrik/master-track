@@ -110,6 +110,15 @@
       }
     }
   }
+
+  &__title {
+    &_about {
+      display: inline-block;
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
 }
 
 .slider__wrapper {

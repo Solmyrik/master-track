@@ -175,13 +175,13 @@
         <section class="brand about-brand _margin-b">
           <div class="about-brand__triggers-wrapper">
             <div class="about-brand__triggers">
-              <a href="" class="about-brand__trigger">о бренде</a>
-              <a href="" class="about-brand__trigger">производство</a>
-              <a href="" class="about-brand__trigger">услуги</a>
-              <a href="" class="about-brand__trigger">проекты</a>
+              <a href="#brand" class="about-brand__trigger active">о бренде</a>
+              <a href="#production" class="about-brand__trigger">производство</a>
+              <a href="#services" class="about-brand__trigger">услуги</a>
+              <a href="#projects" class="about-brand__trigger">проекты</a>
             </div>
           </div>
-          <div class="brand__container">
+          <div id="brand" class="brand__container">
             <div class="brand__body">
               <div class="brand__left">
                 <h4 class="brand__title about-brand__title _h4">О бренде</h4>
@@ -191,10 +191,10 @@
                 </div>
                 <div class="brand__footer">
                   <div class="about-brand__links">
-                    <a href="" class="about-brand__link _btn-link active">о бренде</a>
-                    <a href="" class="about-brand__link _btn-link">производство</a>
-                    <a href="" class="about-brand__link _btn-link">услуги</a>
-                    <a href="" class="about-brand__link _btn-link">проекты</a>
+                    <a href="#brand" class="about-brand__link _btn-link active">о бренде</a>
+                    <a href="#production" class="about-brand__link _btn-link">производство</a>
+                    <a href="#services" class="about-brand__link _btn-link">услуги</a>
+                    <a href="#projects" class="about-brand__link _btn-link">проекты</a>
                   </div>
 
                   <p class="brand__text about-brand__text _anim">
@@ -220,11 +220,12 @@
           </div>
         </section>
         <section class="text-block _margin-s">
-          <div class="text-block__container">
-            <div class="text-block__content">
-              <span class="text-span1 _anim"
-                ><span class="text-span2 _anim"
-                  ><span class="text-span3 _anim"><b>Master Track </b>это собственное </span
+          <div class="text-block__container only-pc-tablet">
+            <div class="text-block__content _anim">
+              <span class="text-span1 _anim text-block-mobile"
+                ><span class="text-span2 _anim text-block-mobile"
+                  ><span class="text-span3 _anim text-block-mobile"
+                    ><b>Master Track </b>это собственное </span
                   >производство</span
                 ></span
               >
@@ -237,18 +238,36 @@
               </p>
             </div>
           </div>
+          <div class="text-block__container only-mobile">
+            <div class="text-block__content _anim">
+              <span class="text-span1 _anim text-block-mobile"
+                ><span class="text-span2 _anim text-block-mobile"
+                  ><span class="text-span3 _anim text-block-mobile"
+                    ><b>Master Track </b>это собственное
+                  </span></span
+                ></span
+              >
+              <p class="_anim">
+                <span>
+                  производство осветительных систем в&nbsp;Москве, оснащенное передовым
+                  оборудованием и&nbsp;специализирующееся на&nbsp;выпуске надежных решений
+                  для&nbsp;освещения объектов любой сложности</span
+                >
+              </p>
+            </div>
+          </div>
         </section>
-        <section class="own-production _margin-b">
+        <section id="production" class="own-production _margin-b">
           <div class="own-production__container">
             <div class="own-production__left">
               <div class="own-production__content">
                 <h4 class="own-production__title _h4">собственное производство</h4>
                 <div class="own-production__description">
-                  <p class="_par-m">
+                  <p class="_par-m _anim">
                     Разработанные специалистами бренда технологические линии позволяют выпускать
                     трехфазный шинопровод высокого качества по&nbsp;доступной цене
                   </p>
-                  <p class="_par-m">
+                  <p class="_par-m _anim">
                     Мы&nbsp;также&nbsp;сотрудничаем с&nbsp;ведущими зарубежными производителями,
                     которые изготавливают стильные и&nbsp;надежные светильники
                     по&nbsp;индивидуальным заказам нашего бренда
@@ -288,7 +307,7 @@
                 <div class="own-production__image">
                   <img src="img/ownproduction/2.jpg" alt="production" />
                 </div>
-                <p class="own-production__text _par-m">
+                <p class="own-production__text _par-m _anim">
                   Команда Master Track тщательно&nbsp;следит за качеством продукции на каждом этапе
                   производства
                 </p>
@@ -296,7 +315,7 @@
             </div>
           </div>
         </section>
-        <section class="services _margin-b">
+        <section id="services" class="services _margin-b">
           <div class="services__container">
             <div class="services__top">
               <h4 class="services__title _h4">наши услуги</h4>
@@ -372,9 +391,9 @@
             </div>
           </div>
         </section>
-        <section class="level _margin-b">
+        <section id="projects" class="level _margin-b">
           <div class="level__container">
-            <a href="" class="level__title _btn-link only-pc only-tablet">реализованные проекты</a>
+            <a href="" class="level__title _btn-link level__title_about">реализованные проекты</a>
             <h2 class="level__title _h2 only-mobile">наши проекты</h2>
             <div class="level__wrapper">
               <div class="swiper-container level__body slider swiper-block">

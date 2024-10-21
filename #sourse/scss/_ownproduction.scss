@@ -21,7 +21,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 11px;
+    margin-bottom: 30px;
     @media (max-width: $mobile) {
       flex-direction: column;
       gap: 30px;
@@ -167,7 +167,7 @@
   &__decor {
     white-space: nowrap;
     left: 0;
-    top: 115px;
+    top: 135px;
     position: absolute;
     font-weight: 400;
     font-size: 158px;

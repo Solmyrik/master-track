@@ -303,8 +303,20 @@ if (faqItem && faqItem.length) {
   faqItem.forEach((e) => {
     e.addEventListener('click', feqHandler);
   });
+
+  function allCloseFaq() {
+    faqItem.forEach((item) => {
+      console.log(item);
+      currentContent = item.nextElementSibling;
+      item.classList.remove('active');
+      currentContent.style.maxHeight = 0;
+      currentContent.classList.remove('active');
+    });
+  }
+
   function feqHandler(e) {
     e.preventDefault();
+    allCloseFaq();
     currentContent = e.currentTarget.nextElementSibling;
     e.currentTarget.classList.toggle('active');
     if (e.currentTarget.classList.contains('active')) {

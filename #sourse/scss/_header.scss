@@ -318,11 +318,9 @@
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
-  display: none;
-  &.active {
-    display: block;
-    cursor: pointer;
-  }
+
+  display: block;
+  cursor: pointer;
 }
 
 .header__search-input {

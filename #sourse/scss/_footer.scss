@@ -69,10 +69,29 @@
     line-height: 120%;
     color: $text-white;
     opacity: 0.8;
-    transition: all 0.2s;
-    &:hover {
-      border-bottom: 1px solid $text-white;
+    transition: all 0.3s;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      width: 0%;
+      height: 1px;
+      min-height: 1px;
+      max-height: 1px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: $text-white;
+      transition: all 0.3s;
     }
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+
     @media (max-width: $mobile) {
       font-size: 14px;
     }
@@ -145,6 +164,14 @@
       align-items: center;
       text-align: center;
       gap: 16px;
+    }
+  }
+}
+
+.footer__item_not {
+  .footer__link {
+    &::before {
+      display: none;
     }
   }
 }

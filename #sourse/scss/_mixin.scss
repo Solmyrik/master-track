@@ -533,10 +533,12 @@ $bg-green: #e0e1dc;
 }
 
 .only-pc {
+  display: block;
   @media (max-width: $tablet) {
     display: none;
   }
 }
+
 .only-tablet {
   display: none;
   @media (max-width: $tablet) {
@@ -550,5 +552,12 @@ $bg-green: #e0e1dc;
   display: none;
   @media (max-width: $mobile) {
     display: block;
+  }
+}
+
+.only-pc-tablet {
+  display: block;
+  @media (max-width: $mobile) {
+    display: none;
   }
 }

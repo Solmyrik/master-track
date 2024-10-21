@@ -12,6 +12,9 @@ if (levelSliderContainer) {
       },
     },
     touchEventsTarget: 'container',
+    mousewheel: {
+      forceToAxis: true,
+    },
   });
 }
 
