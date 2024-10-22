@@ -374,6 +374,7 @@
   text-transform: uppercase;
   color: #2e2d2d;
   white-space: nowrap;
+  cursor: pointer;
   padding-bottom: 4px;
   border-bottom: 1px solid #2e2d2d;
   transition: border-bottom 0.3s;
