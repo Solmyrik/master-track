@@ -70,9 +70,33 @@ document.addEventListener('DOMContentLoaded', function () {
 const iconMenu = document.querySelector('.menu-icon');
 const menuBody = document.querySelector('.menu');
 const menuShit = document.querySelector('.menu-shit');
+const menuIcon = document.querySelector('.menu__icon');
 if (iconMenu) {
   const header = document.querySelector('.header');
   iconMenu.addEventListener('click', function (e) {
+    if (menuBody.classList.contains('active')) {
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('is-open');
+      menuBody.classList.toggle('active');
+      setTimeout(() => {
+        menuShit.classList.toggle('active');
+      }, 200);
+      setTimeout(() => {
+        header.classList.toggle('menu-active');
+      }, 200);
+    } else {
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('is-open');
+      setTimeout(() => {
+        menuBody.classList.toggle('active');
+      }, 100);
+      menuShit.classList.toggle('active');
+      setTimeout(() => {
+        header.classList.toggle('menu-active');
+      }, 200);
+    }
+  });
+  menuIcon.addEventListener('click', function (e) {
     if (menuBody.classList.contains('active')) {
       document.body.classList.toggle('_lock');
       iconMenu.classList.toggle('is-open');
