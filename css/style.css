@@ -378,9 +378,25 @@
   padding-bottom: 4px;
   border-bottom: 1px solid #2e2d2d;
   transition: border-bottom 0.3s;
+  position: relative;
 }
-._btn-link:hover {
-  border-bottom: 1px solid #f50536;
+._btn-link::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 0%;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #f50536;
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  ._btn-link:hover::before {
+    width: 100%;
+  }
 }
 @media (max-width: 992px) {
   ._btn-link {
@@ -2605,9 +2621,25 @@ body.lock {
   border-bottom: 1px solid #2e2d2d;
   transition: border-bottom 0.3s;
   display: inline-block;
+  position: relative;
 }
-.projects__link p:hover {
-  border-bottom: 1px solid #f50536;
+.projects__link p::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 0%;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #f50536;
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .projects__link p:hover::before {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .projects__link p {
@@ -3009,9 +3041,25 @@ body.lock {
   border-bottom: 1px solid #2e2d2d;
   transition: border-bottom 0.3s;
   display: inline-block;
+  position: relative;
 }
-.own-production__link p:hover {
-  border-bottom: 1px solid #f50536;
+.own-production__link p::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 0%;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #f50536;
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .own-production__link p:hover::before {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .own-production__link p {

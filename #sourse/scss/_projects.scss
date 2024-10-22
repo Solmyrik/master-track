@@ -127,8 +127,27 @@
       border-bottom: 1px solid $text-dark;
       transition: border-bottom 0.3s;
       display: inline-block;
-      &:hover {
-        border-bottom: 1px solid #f50536;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        width: 0%;
+        height: 1px;
+        min-height: 1px;
+        max-height: 1px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #f50536;
+        transition: all 0.3s;
+      }
+      @media (hover: hover) {
+        &:hover {
+          // border-bottom: 1px solid #f50536;
+          &::before {
+            width: 100%;
+          }
+        }
       }
       @media (max-width: $mobile) {
         border: none;

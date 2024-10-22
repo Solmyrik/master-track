@@ -1,4 +1,4 @@
-function decorAnimation(scrollingText) {
+function decorAnimation(scrollingText, maxMinPosition, step) {
   if (!scrollingText) return;
   let leftPosition = 0;
   let isInViewport = false;
@@ -7,12 +7,12 @@ function decorAnimation(scrollingText) {
   function scrollText(scrollingDown) {
     if (isInViewport) {
       if (scrollingDown) {
-        if (leftPosition > -400) {
-          leftPosition -= 20; // Устанавливаем скорость перемещения при прокрутке вниз
+        if (leftPosition > maxMinPosition) {
+          leftPosition -= step; // Устанавливаем скорость перемещения при прокрутке вниз
         }
       } else {
         if (leftPosition < 0) {
-          leftPosition += 20; // Устанавливаем скорость перемещения при прокрутке вверх
+          leftPosition += step; // Устанавливаем скорость перемещения при прокрутке вверх
         }
       }
       console.log(leftPosition);
@@ -43,6 +43,8 @@ function decorAnimation(scrollingText) {
 }
 
 const scrollingText = document.querySelector('.scrolling-text');
+const scrollingTextBrend = document.querySelector('.scrolling-text-brend');
 const scrollingTextAbout = document.querySelector('.scrolling-text-about');
-decorAnimation(scrollingText);
-decorAnimation(scrollingTextAbout);
+decorAnimation(scrollingText, -400, 20);
+decorAnimation(scrollingTextBrend, -200, 15);
+decorAnimation(scrollingTextAbout, -720, 32);
