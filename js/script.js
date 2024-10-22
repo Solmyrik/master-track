@@ -311,6 +311,11 @@ if (faqItem && faqItem.length) {
 
   function feqHandler(e) {
     e.preventDefault();
+    const isActive = e.currentTarget.classList.contains('active');
+    if (isActive) {
+      allCloseFaq();
+      return;
+    }
     allCloseFaq();
     currentContent = e.currentTarget.nextElementSibling;
     e.currentTarget.classList.toggle('active');
