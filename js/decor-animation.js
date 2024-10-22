@@ -7,12 +7,12 @@ function decorAnimation(scrollingText) {
   function scrollText(scrollingDown) {
     if (isInViewport) {
       if (scrollingDown) {
-        if (leftPosition > -200) {
-          leftPosition -= 8; // Устанавливаем скорость перемещения при прокрутке вниз
+        if (leftPosition > -400) {
+          leftPosition -= 20; // Устанавливаем скорость перемещения при прокрутке вниз
         }
       } else {
         if (leftPosition < 0) {
-          leftPosition += 8; // Устанавливаем скорость перемещения при прокрутке вверх
+          leftPosition += 20; // Устанавливаем скорость перемещения при прокрутке вверх
         }
       }
       console.log(leftPosition);

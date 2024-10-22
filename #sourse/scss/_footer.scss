@@ -145,8 +145,26 @@
     }
     a {
       transition: all 0.2s;
-      &:hover {
-        border-bottom: 1px solid $text-white;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        width: 0%;
+        height: 1px;
+        min-height: 1px;
+        max-height: 1px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: $text-white;
+        transition: all 0.3s;
+      }
+      @media (hover: hover) {
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
       }
       p {
         transition: all 0.2s;

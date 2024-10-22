@@ -114,19 +114,14 @@ if (headerSearch) {
 const searchInput = document.querySelector('.header-search-input');
 const searchClose = document.querySelector('.header__search-close');
 
-if (searchInput) {
-  searchInput.addEventListener('input', (e) => {
-    if (e.target.value && e.target.value.length > 0) {
-      searchClose.classList.add('active');
-    } else {
-      searchClose.classList.remove('active');
-    }
-  });
-
+if (searchClose) {
   searchClose.addEventListener('click', (e) => {
-    searchInput.value = '';
+    headerSearchInput.classList.remove('active');
+    headerSearch.classList.remove('active');
+    headerSearchList.classList.remove('active');
   });
 }
+
 // header__search end
 
 // функционал поиск (в будущем вырезать)

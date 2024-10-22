@@ -2470,7 +2470,7 @@ body.lock {
   flex: 0 0 16px;
 }
 .certificates__link:hover svg path {
-  stroke: #e31e24;
+  fill: #e31e24;
 }
 .projects__top {
   display: flex;
@@ -4283,9 +4283,25 @@ body.lock {
 }
 .footer__bottom a {
   transition: all 0.2s;
+  position: relative;
 }
-.footer__bottom a:hover {
-  border-bottom: 1px solid #f4f4ef;
+.footer__bottom a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #f4f4ef;
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .footer__bottom a:hover::before {
+    width: 100%;
+  }
 }
 .footer__bottom a p {
   transition: all 0.2s;
