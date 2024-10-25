@@ -45,6 +45,6 @@ function decorAnimation(scrollingText, maxMinPosition, step) {
 const scrollingText = document.querySelector('.scrolling-text');
 const scrollingTextBrend = document.querySelector('.scrolling-text-brend');
 const scrollingTextAbout = document.querySelector('.scrolling-text-about');
-decorAnimation(scrollingText, -400, 20);
+decorAnimation(scrollingText, -400, 10);
 decorAnimation(scrollingTextBrend, -200, 15);
 decorAnimation(scrollingTextAbout, -720, 32);

@@ -34,3 +34,44 @@
     }
   }
 }
+.checkbox-product {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.label-product {
+  cursor: pointer;
+  width: 46px;
+  height: 24px;
+  background: inherit;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  border: 1px solid $strock-light-mode;
+}
+
+.label-product:after {
+  content: '';
+  position: absolute;
+  top: 3.5px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background: $bg-total-dark;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.checkbox-product:checked + .label-product {
+}
+
+.checkbox-product:checked + .label-product:after {
+  left: calc(100% - 4px);
+  transform: translateX(-100%);
+  background: $accent-red;
+}
+
+// .label-product:active:after {
+//   width: 130px;
+// }
