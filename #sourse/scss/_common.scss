@@ -75,3 +75,15 @@
 // .label-product:active:after {
 //   width: 130px;
 // }
+
+/* Для Chrome, Safari и Edge */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

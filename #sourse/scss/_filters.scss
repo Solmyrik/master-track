@@ -1,0 +1,120 @@
+.filters {
+  background: $bg-total-dark;
+  margin-bottom: 24px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s;
+  &__container {
+    padding-bottom: 67px;
+    @media (max-width: $mobile) {
+      padding-bottom: 0;
+    }
+  }
+  &__body {
+    padding: 40px;
+    position: relative;
+    @media (max-width: $laptop) {
+      padding: 40px 0px;
+    }
+    @media (max-width: $mobile) {
+      padding: 20px 0px;
+    }
+  }
+
+  &__checkboxes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 50px;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 30px;
+      justify-items: start;
+      position: relative;
+    }
+  }
+  &__column {
+    &:nth-of-type(5) {
+      @media (max-width: $mobile) {
+        grid-area: 2 / 3 / 3 / 4;
+      }
+    }
+  }
+
+  &__name {
+    color: $text-white;
+    margin-bottom: 20px;
+    padding-right: 5px;
+  }
+  ._wallet-chectext {
+    color: $dark-mode-light-grey;
+    font-size: 14px;
+  }
+  ._fake-wallet {
+    border: 1.5px solid #d6d6d6;
+    &::before {
+      background-color: $bg-light;
+    }
+    &::after {
+      background-image: url('../img/input-checkbox-black.svg');
+    }
+    &:hover {
+      border: 1.5px solid #f4f4ef;
+    }
+  }
+  ._checkbox-wallet:checked + ._fake-wallet {
+    border: 1.5px solid $bg-light;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__ranges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__reset {
+    background: inherit;
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: -27px;
+    right: 40px;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: $bg-light;
+      @media (max-width: $mobile) {
+        color: $text-light-grey;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          stroke: $accent-red;
+        }
+      }
+    }
+    @media (max-width: $laptop) {
+      right: 0px;
+    }
+    @media (max-width: $tablet) {
+      svg {
+        path {
+          stroke: $accent-red;
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

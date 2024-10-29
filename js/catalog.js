@@ -19,3 +19,29 @@ if (checkboxProducts && checkboxProducts.length) {
     item.addEventListener('change', onChangeSize);
   });
 }
+
+// фильтры
+const productsButton = document.querySelector('.products__button-1');
+const productsFilters1 = document.querySelector('.filters-1');
+const productsButton2 = document.querySelector('.products__button-2');
+const productsFilters2 = document.querySelector('.filters-2');
+
+function filtersChange(button, filter) {
+  if (!button || !filter) return;
+
+  button.addEventListener('click', (e) => {
+    button.classList.toggle('active');
+    const text = button.previousElementSibling;
+
+    if (button.classList.contains('active')) {
+      text.textContent = 'Закрыть';
+      filter.style.maxHeight = filter.scrollHeight + 'px';
+    } else {
+      text.textContent = 'Фильтры';
+      filter.style.maxHeight = 0 + 'px';
+    }
+  });
+}
+filtersChange(productsButton, productsFilters1);
+filtersChange(productsButton2, productsFilters2);
+// фильтры end

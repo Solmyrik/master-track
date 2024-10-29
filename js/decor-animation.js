@@ -46,5 +46,5 @@ const scrollingText = document.querySelector('.scrolling-text');
 const scrollingTextBrend = document.querySelector('.scrolling-text-brend');
 const scrollingTextAbout = document.querySelector('.scrolling-text-about');
 decorAnimation(scrollingText, -400, 10);
-decorAnimation(scrollingTextBrend, -200, 15);
-decorAnimation(scrollingTextAbout, -720, 32);
+decorAnimation(scrollingTextBrend, -200, 7);
+decorAnimation(scrollingTextAbout, -720, 16);

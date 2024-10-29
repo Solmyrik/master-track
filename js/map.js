@@ -5,11 +5,11 @@ if (mapSection) {
 
   function init() {
     let map = new ymaps.Map('map', {
-      center: [55.717083244194754, 37.62363635581959], // ваши данные
-      zoom: 18,
+      center: [55.78534106893349, 37.708957999999996], // ваши данные
+      zoom: 17,
     });
 
-    let placemark = new ymaps.Placemark([55.717083244194754, 37.62363635581959], {}, {});
+    let placemark = new ymaps.Placemark([55.78534106893349, 37.708957999999996], {}, {});
 
     // map.controls.remove('geolocationControl'); // удаляем геолокацию
     // map.controls.remove('searchControl'); // удаляем поиск
