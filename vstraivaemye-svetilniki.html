@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Встраиваемые светильники</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="js/sliders.js"></script>
+    <script defer src="js/catalog.js"></script>
+    <script defer src="js/range.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header" class="header black">
+        <div class="header__wrapper">
+          <div class="header__container">
+            <div class="header__left">
+              <a href="index.html" class="header__logo">
+                <img class="header__logo-b" src="img/icons/logo.svg" alt="logo" />
+                <img class="header__logo-w" src="img/icons/logo-w.svg" alt="logo" />
+              </a>
+            </div>
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li class="header__item"><a href="" class="header__link">Продукция</a></li>
+                <li class="header__item"><a href="" class="header__link">Проекты</a></li>
+                <li class="header__item"><a href="" class="header__link">О нас</a></li>
+                <li class="header__item"><a href="" class="header__link">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="header__right">
+              <div class="header__icons">
+                <div class="header__search-wrapper">
+                  <div class="header__search">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="8.25" cy="8.25" r="7.5" stroke="#4C4A4A" stroke-width="1.5" />
+                      <path
+                        d="M13.75 13.75L19.0533 19.0533"
+                        stroke="#4C4A4A"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="header__search-input">
+                    <input
+                      class="header-search-input"
+                      type="text"
+                      placeholder="Поиск по названию или артикулу"
+                    />
+                    <div class="header__search-close">
+                      <svg
+                        width="9"
+                        height="10"
+                        viewBox="0 0 9 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.691406 1.19238L8.30679 8.80777M8.30679 1.19238L1.07218 8.80777"
+                          stroke="#4C4A4A"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="header__cart">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.06061 6V5.25C2.68097 5.25 2.3612 5.53368 2.31595 5.91061L3.06061 6ZM17 6L17.7451 5.91403C17.7014 5.53559 17.381 5.25 17 5.25V6ZM18.5 19V19.75C18.7139 19.75 18.9176 19.6587 19.0599 19.499C19.2022 19.3393 19.2696 19.1265 19.2451 18.914L18.5 19ZM1.5 19L0.755346 18.9106C0.729782 19.1236 0.796615 19.3373 0.938954 19.4977C1.08129 19.6582 1.28551 19.75 1.5 19.75V19ZM7 2.5L6.37279 2.08877L7 2.5ZM13 2.5L13.6096 2.06308L13 2.5ZM16.2549 6.08597L17.7549 19.086L19.2451 18.914L17.7451 5.91403L16.2549 6.08597ZM18.5 18.25H1.5V19.75H18.5V18.25ZM2.24465 19.0894L3.80526 6.08939L2.31595 5.91061L0.755346 18.9106L2.24465 19.0894ZM6 6C6.74598 6.07754 6.74597 6.07763 6.74596 6.07771C6.74596 6.07772 6.74595 6.0778 6.74595 6.07783C6.74594 6.07789 6.74594 6.07791 6.74594 6.0779C6.74595 6.07788 6.74596 6.07772 6.74599 6.07742C6.74606 6.07682 6.74618 6.07566 6.74636 6.07397C6.74673 6.07059 6.74734 6.06505 6.74819 6.05746C6.74991 6.04227 6.75262 6.0189 6.75638 5.98821C6.76391 5.92679 6.77565 5.83626 6.79209 5.72342C6.82506 5.49716 6.87649 5.1843 6.95006 4.8385C7.1035 4.11731 7.33153 3.36221 7.62721 2.91123L6.37279 2.08877C5.91242 2.79094 5.64045 3.78584 5.4829 4.52636C5.40097 4.91141 5.34416 5.25735 5.30777 5.50715C5.28952 5.63235 5.2763 5.73418 5.26754 5.8056C5.26315 5.84133 5.25988 5.86951 5.25765 5.88927C5.25654 5.89915 5.25568 5.90693 5.25508 5.91249C5.25478 5.91528 5.25454 5.91751 5.25436 5.91917C5.25428 5.92001 5.2542 5.9207 5.25415 5.92125C5.25412 5.92152 5.25409 5.92176 5.25407 5.92196C5.25406 5.92206 5.25405 5.92219 5.25404 5.92224C5.25403 5.92235 5.25402 5.92246 6 6ZM7.62721 2.91123C7.92804 2.4524 8.24331 2.17916 8.59164 2.01103C8.94816 1.83895 9.39536 1.75 10 1.75V0.25C9.25509 0.25 8.56456 0.358515 7.93961 0.660159C7.30645 0.965765 6.7965 1.44252 6.37279 2.08877L7.62721 2.91123ZM10 1.75C10.5962 1.75 11.0311 1.84371 11.3838 2.01864C11.7337 2.19226 12.0583 2.47349 12.3904 2.93692L13.6096 2.06308C13.1711 1.45125 12.6704 0.982469 12.0504 0.674907C11.4331 0.368658 10.7533 0.25 10 0.25V1.75ZM3.06061 6.75H14V5.25H3.06061V6.75ZM14 6.75H17V5.25H14V6.75ZM12.3904 2.93692C12.7531 3.44293 12.9786 4.18714 13.1077 4.87019C13.1701 5.20039 13.2062 5.4945 13.2264 5.70533C13.2366 5.8104 13.2427 5.89387 13.2462 5.94971C13.248 5.97761 13.2491 5.99854 13.2498 6.01175C13.2501 6.01835 13.2503 6.02301 13.2504 6.02565C13.2505 6.02696 13.2505 6.02777 13.2505 6.02806C13.2505 6.0282 13.2505 6.02821 13.2505 6.0281C13.2505 6.02804 13.2505 6.02795 13.2505 6.02782C13.2505 6.02776 13.2505 6.02764 13.2505 6.02761C13.2505 6.02748 13.2505 6.02734 14 6C14.7495 5.97266 14.7495 5.9725 14.7495 5.97234C14.7495 5.97228 14.7495 5.97211 14.7495 5.97198C14.7495 5.97172 14.7495 5.97142 14.7494 5.97109C14.7494 5.97044 14.7494 5.96964 14.7494 5.96872C14.7493 5.96686 14.7492 5.96447 14.7491 5.96155C14.7488 5.95571 14.7484 5.94777 14.748 5.93782C14.747 5.91791 14.7455 5.88995 14.7432 5.8547C14.7388 5.78426 14.7314 5.68445 14.7195 5.56158C14.696 5.31652 14.6543 4.97607 14.5816 4.59156C14.4405 3.84519 14.166 2.83941 13.6096 2.06308L12.3904 2.93692Z"
+                      fill="#4C4A4A"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="header__info">
+                <a href="mailto:info@master-track.ru" class="header__contact"
+                  >info@master-track.ru</a
+                >
+                <a href="tel:+74957441626" class="header__contact">+7 (495) 744-16-26</a>
+              </div>
+              <button class="menu-icon example-1"><span></span></button>
+            </div>
+          </div>
+        </div>
+        <nav class="menu">
+          <div class="menu__body">
+            <label class="menu__label">
+              <div class="menu__icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="8.25" cy="8.25" r="7.5" stroke="#4C4A4A" stroke-width="1.5" />
+                  <path
+                    d="M13.75 13.75L19.0533 19.0533"
+                    stroke="#4C4A4A"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input type="text" placeholder="Поиск по названию или артикулу" />
+            </label>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="" class="menu__link">продукция</a>
+                <ul class="menu-sub">
+                  <li class="menu-sub__item">
+                    <a href="" class="menu-sub__link">Встраиваемые светильники</a>
+                  </li>
+                  <li class="menu-sub__item">
+                    <a href="" class="menu-sub__link">Трековые светильники</a>
+                  </li>
+                  <li class="menu-sub__item"><a href="" class="menu-sub__link">Шинопровод</a></li>
+                  <li class="menu-sub__item">
+                    <a href="" class="menu-sub__link">Комплектующие к шинопроводу</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item"><a href="" class="menu__link">проекты</a></li>
+              <li class="menu__item"><a href="" class="menu__link">о нас</a></li>
+              <li class="menu__item"><a href="" class="menu__link">контакты</a></li>
+              <li class="menu__item"><a href="" class="menu__link">сертификаты</a></li>
+            </ul>
+            <div class="header__info">
+              <a href="mailto:info@master-track.ru" class="header__contact">info@master-track.ru</a>
+              <a href="tel:+74957441626" class="header__contact">+7 (495) 744-16-26</a>
+            </div>
+            <div class="menu__decor">Master Track</div>
+          </div>
+        </nav>
+        <div class="menu-shit"></div>
+      </header>
+      <main class="main">
+        <article class="breadcrumbs">
+          <div class="breadcrumbs__container">
+            <div class="breadcrumbs__body">
+              <a href="">Главная</a>
+              <div class="breadcrumbs__arrow">
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0.5 10.5L5.5 5.5L0.5 0.5" stroke="#2E2D2D" stroke-linecap="round" />
+                </svg>
+              </div>
+              <a href="">Продукция</a>
+              <div class="breadcrumbs__arrow">
+                <svg
+                  width="7"
+                  height="11"
+                  viewBox="0 0 7 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0.5 10.5L5.5 5.5L0.5 0.5" stroke="#2E2D2D" stroke-linecap="round" />
+                </svg>
+              </div>
+              <a href="">Встраиваемые светильники</a>
+            </div>
+          </div>
+        </article>
+
+        <section class="products _margin-b">
+          <div class="products__container">
+            <h2 class="products__title _h2">шинопровод для светильников</h2>
+            <div class="products__filters">
+              <div class="products__left">
+                <input type="checkbox" class="checkbox-product" id="switch3" /><label
+                  class="label-product"
+                  for="switch3"
+                ></label>
+                <p>Показать размеры</p>
+              </div>
+            </div>
+          </div>
+
+          <article class="catalog-products">
+            <div class="catalog-products__container">
+              <div class="catalog-products__body">
+                <div class="catalog-products__item">
+                  <div class="catalog-products__img">
+                    <img class="catalog-products__img-main" src="img/catalog/3.jpg" alt="product" />
+                    <img class="catalog-products__img-size" src="img/catalog/size.jpg" alt="size" />
+                  </div>
+                  <div class="catalog-products__content">
+                    <div class="catalog-products__top">
+                      <h5 class="catalog-products__name _h5">MT3F</h5>
+                      <a href="" class="catalog-products__link"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M8 0V16M0 8H16" stroke="#2E2D2D" stroke-width="1.5" />
+                        </svg>
+                      </a>
+                    </div>
+                    <p class="catalog-products__description _par-m _l-gray">
+                      Шинопровод, трехфазный
+                    </p>
+                  </div>
+                </div>
+                <div class="catalog-products__item">
+                  <div class="catalog-products__img">
+                    <img class="catalog-products__img-main" src="img/catalog/3.jpg" alt="product" />
+                    <img class="catalog-products__img-size" src="img/catalog/size.jpg" alt="size" />
+                  </div>
+                  <div class="catalog-products__content">
+                    <div class="catalog-products__top">
+                      <h5 class="catalog-products__name _h5">MT3FD</h5>
+                      <a href="" class="catalog-products__link"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M8 0V16M0 8H16" stroke="#2E2D2D" stroke-width="1.5" />
+                        </svg>
+                      </a>
+                    </div>
+                    <p class="catalog-products__description _par-m _l-gray">
+                      Шинопровод, трехфазный
+                    </p>
+                  </div>
+                </div>
+                <div class="catalog-products__item">
+                  <div class="catalog-products__img">
+                    <img class="catalog-products__img-main" src="img/catalog/3.jpg" alt="product" />
+                    <img class="catalog-products__img-size" src="img/catalog/size.jpg" alt="size" />
+                  </div>
+                  <div class="catalog-products__content">
+                    <div class="catalog-products__top">
+                      <h5 class="catalog-products__name _h5">MT3FRD</h5>
+                      <a href="" class="catalog-products__link"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M8 0V16M0 8H16" stroke="#2E2D2D" stroke-width="1.5" />
+                        </svg>
+                      </a>
+                    </div>
+                    <p class="catalog-products__description _par-m _l-gray">
+                      Шинопровод, трехфазный
+                    </p>
+                  </div>
+                </div>
+                <div class="catalog-products__item">
+                  <div class="catalog-products__img">
+                    <img class="catalog-products__img-main" src="img/catalog/3.jpg" alt="product" />
+                    <img class="catalog-products__img-size" src="img/catalog/size.jpg" alt="size" />
+                  </div>
+                  <div class="catalog-products__content">
+                    <div class="catalog-products__top">
+                      <h5 class="catalog-products__name _h5">MT3FRD</h5>
+                      <a href="" class="catalog-products__link"
+                        ><svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M8 0V16M0 8H16" stroke="#2E2D2D" stroke-width="1.5" />
+                        </svg>
+                      </a>
+                    </div>
+                    <p class="catalog-products__description _par-m _l-gray">
+                      Шинопровод, трехфазный
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="form _margin-b">
+          <div class="form__container">
+            <div class="form__body">
+              <h2 class="form__title _h2 _anim">Давайте обсудим ваш проект?</h2>
+              <form action="" class="form__form">
+                <div class="form__top">
+                  <input class="form__input" type="text" placeholder="Имя*" />
+                  <input class="form__input" type="tel" placeholder="Ваш телефон*" />
+                  <input class="form__input" type="text" placeholder="Ваша электронная почта*" />
+                  <div class="custom-file-upload">
+                    <label for="fileInput">
+                      <p id="fileName">Прикрепить файл</p>
+                      <svg
+                        width="8"
+                        height="17"
+                        viewBox="0 0 8 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0.0664062 2.83333C0.0664063 2.08189 0.364917 1.36122 0.89627 0.829864C1.42762 0.298511 2.14829 0 2.89974 0C3.65119 0 4.37186 0.298511 4.90321 0.829864C5.43456 1.36122 5.73307 2.08189 5.73307 2.83333V13.0333C5.73307 13.4842 5.55397 13.9166 5.23515 14.2354C4.91634 14.5542 4.48394 14.7333 4.03307 14.7333C3.5822 14.7333 3.1498 14.5542 2.83099 14.2354C2.51218 13.9166 2.33307 13.4842 2.33307 13.0333V5.1C2.33307 4.94971 2.39278 4.80558 2.49905 4.69931C2.60532 4.59304 2.74945 4.53333 2.89974 4.53333C3.05003 4.53333 3.19416 4.59304 3.30043 4.69931C3.4067 4.80558 3.46641 4.94971 3.46641 5.1V13.0333C3.46641 13.1836 3.52611 13.3278 3.63238 13.434C3.73865 13.5403 3.88278 13.6 4.03307 13.6C4.18336 13.6 4.3275 13.5403 4.43377 13.434C4.54004 13.3278 4.59974 13.1836 4.59974 13.0333V2.83333C4.59974 2.61009 4.55577 2.38902 4.47034 2.18277C4.3849 1.97652 4.25968 1.78911 4.10182 1.63125C3.94396 1.47339 3.75656 1.34817 3.5503 1.26274C3.34405 1.17731 3.12299 1.13333 2.89974 1.13333C2.67649 1.13333 2.45543 1.17731 2.24918 1.26274C2.04292 1.34817 1.85552 1.47339 1.69766 1.63125C1.5398 1.78911 1.41458 1.97652 1.32914 2.18277C1.24371 2.38902 1.19974 2.61009 1.19974 2.83333V13.0333C1.19974 13.7848 1.49825 14.5054 2.0296 15.0368C2.56096 15.5682 3.28163 15.8667 4.03307 15.8667C4.78452 15.8667 5.50519 15.5682 6.03654 15.0368C6.5679 14.5054 6.86641 13.7848 6.86641 13.0333V5.1C6.86641 4.94971 6.92611 4.80558 7.03238 4.69931C7.13865 4.59304 7.28278 4.53333 7.43307 4.53333C7.58336 4.53333 7.7275 4.59304 7.83377 4.69931C7.94004 4.80558 7.99974 4.94971 7.99974 5.1V13.0333C7.99974 14.0854 7.58182 15.0943 6.83793 15.8382C6.09404 16.5821 5.0851 17 4.03307 17C2.98105 17 1.97211 16.5821 1.22822 15.8382C0.484322 15.0943 0.0664062 14.0854 0.0664062 13.0333V2.83333Z"
+                          fill="#2E2D2D"
+                        />
+                      </svg>
+                    </label>
+                    <input type="file" id="fileInput" />
+                    <!-- <span id="fileName">Файл загружен</span> -->
+                  </div>
+                </div>
+                <textarea
+                  class="form__textarea"
+                  placeholder="Расскажите подробнее о вашем проекте"
+                ></textarea>
+                <label class="form__check _label-wallet">
+                  <input class="_checkbox-wallet" type="checkbox" />
+                  <span class="_fake-wallet"></span>
+                  <span class="_wallet-chectext"
+                    >Я согласен на хранение и&nbsp;обработку моих персональных данных
+                  </span>
+                </label>
+                <a class="form__button _btn-big">
+                  <p>оставить заявку</p>
+                  <span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 1H15.75C15.75 0.585786 15.4142 0.25 15 0.25V1ZM0.46967 14.4697C0.176777 14.7626 0.176777 15.2374 0.46967 15.5303C0.762563 15.8232 1.23744 15.8232 1.53033 15.5303L0.46967 14.4697ZM14.4697 0.46967L0.46967 14.4697L1.53033 15.5303L15.5303 1.53033L14.4697 0.46967ZM15 0.25H1V1.75H15V0.25ZM14.25 1V15H15.75V1H14.25Z"
+                        fill="#2E2D2D"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="to-top-footer">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.25 1L9.89632 0.646569C9.9901 0.552726 10.1173 0.5 10.25 0.5C10.3827 0.5 10.5099 0.552726 10.6037 0.646569L10.25 1ZM1.35368 10.6098C1.15848 10.8052 0.841899 10.8053 0.646569 10.6101C0.451239 10.4149 0.45113 10.0983 0.646324 9.90298L1.35368 10.6098ZM19.8537 9.90298C20.0489 10.0983 20.0488 10.4149 19.8534 10.6101C19.6581 10.8053 19.3415 10.8052 19.1463 10.6098L19.8537 9.90298ZM9.75 20L9.75 1L10.75 1L10.75 20H9.75ZM10.6037 1.35343L1.35368 10.6098L0.646324 9.90298L9.89632 0.646569L10.6037 1.35343ZM10.6037 0.646569L19.8537 9.90298L19.1463 10.6098L9.89632 1.35343L10.6037 0.646569Z"
+              fill="#2E2D2D"
+            />
+          </svg>
+        </div>
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="footer__left">
+              Мы производим осветительные системы и&nbsp;создаем готовые проекты с&nbsp;полным
+              сопровождением
+            </div>
+            <div class="footer__columns">
+              <div class="footer__column">
+                <h4 class="footer__title _h4">Продукция</h4>
+                <nav class="footer__menu">
+                  <ul class="footer__list">
+                    <li class="footer__item">
+                      <a href="" class="footer__link">Трековые светильники</a>
+                    </li>
+                    <li class="footer__item">
+                      <a href="" class="footer__link">Встраиваемые светильники</a>
+                    </li>
+                    <li class="footer__item">
+                      <a href="" class="footer__link">Шинопровод для светильников</a>
+                    </li>
+                    <li class="footer__item">
+                      <a href="" class="footer__link">Комплектующие к шинопроводу</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__column">
+                <h4 class="footer__title _h4">Информация</h4>
+                <nav class="footer__menu">
+                  <ul class="footer__list">
+                    <li class="footer__item"><a href="" class="footer__link">Наши проекты</a></li>
+                    <li class="footer__item"><a href="" class="footer__link">О бренде</a></li>
+                    <li class="footer__item"><a href="" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="" class="footer__link">Сертификаты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__column">
+                <h4 class="footer__title _h4">Для связи</h4>
+                <nav class="footer__menu">
+                  <ul class="footer__list">
+                    <li class="footer__item footer__item_not">
+                      <a href="+74957441626" class="footer__link">+7 (495) 744-16-26</a>
+                    </li>
+                    <li class="footer__item footer__item_not">
+                      <a href="" class="footer__link"
+                        >678345, г. Москва, ул. <br />
+                        Люсиновская, д. 55</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="footer__center">Master Track — профессиональные системы освещения</div>
+          <div class="footer__bottom">
+            <a class="mob-footer-2" href=""><p>Политика конфиденциальности</p></a>
+            <p class="mob-footer-1">©2024, все права защищены</p>
+            <a class="mob-footer-3" href=""><p>Разработка сайта</p></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="to-top">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10.25 1L9.89632 0.646569C9.9901 0.552726 10.1173 0.5 10.25 0.5C10.3827 0.5 10.5099 0.552726 10.6037 0.646569L10.25 1ZM1.35368 10.6098C1.15848 10.8052 0.841899 10.8053 0.646569 10.6101C0.451239 10.4149 0.45113 10.0983 0.646324 9.90298L1.35368 10.6098ZM19.8537 9.90298C20.0489 10.0983 20.0488 10.4149 19.8534 10.6101C19.6581 10.8053 19.3415 10.8052 19.1463 10.6098L19.8537 9.90298ZM9.75 20L9.75 1L10.75 1L10.75 20H9.75ZM10.6037 1.35343L1.35368 10.6098L0.646324 9.90298L9.89632 0.646569L10.6037 1.35343ZM10.6037 0.646569L19.8537 9.90298L19.1463 10.6098L9.89632 1.35343L10.6037 0.646569Z"
+          fill="#2E2D2D"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
