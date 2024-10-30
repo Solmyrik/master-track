@@ -2454,7 +2454,7 @@ body.lock {
 .label-product:after {
   content: "";
   position: absolute;
-  top: 3.5px;
+  top: 3.2px;
   left: 4px;
   width: 16px;
   height: 16px;
@@ -2463,6 +2463,11 @@ body.lock {
   transition: 0.3s;
 }
 
+@supports (-webkit-appearance: none) {
+  .label-product:after {
+    top: 3.2px; /* или любое другое значение, специфичное для Safari */
+  }
+}
 .checkbox-product:checked + .label-product:after {
   left: calc(100% - 4px);
   transform: translateX(-100%);
