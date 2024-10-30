@@ -112,6 +112,30 @@
     }
   }
 
+  &__img-text {
+    width: 100%;
+    padding-bottom: 100%;
+    background: $bg-white;
+    position: relative;
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: $text-grey;
+      width: 100%;
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+
   &__img {
     border: 1px solid $strock-light-mode;
     margin-bottom: 20px;

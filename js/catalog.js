@@ -36,9 +36,11 @@ function filtersChange(button, filter) {
     if (button.classList.contains('active')) {
       text.textContent = 'Закрыть';
       filter.style.maxHeight = filter.scrollHeight + 'px';
+      filter.classList.add('active');
     } else {
       text.textContent = 'Фильтры';
       filter.style.maxHeight = 0 + 'px';
+      filter.classList.remove('active');
     }
   });
 }

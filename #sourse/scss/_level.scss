@@ -3,6 +3,12 @@
   &__container {
   }
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
   &__title {
     //  margin-bottom: 50px;
     @media (max-width: $tablet) {

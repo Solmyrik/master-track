@@ -1,9 +1,12 @@
 .filters {
   background: $bg-total-dark;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   max-height: 0px;
   overflow: hidden;
   transition: all 0.5s;
+  &.active {
+    margin-bottom: 24px;
+  }
   &__container {
     padding-bottom: 67px;
     @media (max-width: $mobile) {

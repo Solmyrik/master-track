@@ -1791,6 +1791,11 @@ body.lock {
 .level {
   padding-bottom: 32px;
 }
+.level__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 @media (max-width: 992px) {
   .level__title {
     border-bottom: 1px solid #2e2d2d;
@@ -4474,10 +4479,13 @@ input[type=number] {
 /* Style for active state input */
 .filters {
   background: #2e2d2d;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
   max-height: 0px;
   overflow: hidden;
   transition: all 0.5s;
+}
+.filters.active {
+  margin-bottom: 24px;
 }
 .filters__container {
   padding-bottom: 67px;
@@ -4698,6 +4706,31 @@ input[type=number] {
 @media (hover: hover) {
   .catalog-products__item:hover .catalog-products__link svg path {
     stroke: #e31e24;
+  }
+}
+.catalog-products__img-text {
+  width: 100%;
+  padding-bottom: 100%;
+  background: #fdfdfd;
+  position: relative;
+}
+.catalog-products__img-text span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #4c4a4a;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .catalog-products__img-text span {
+    font-size: 14px;
   }
 }
 .catalog-products__img {
