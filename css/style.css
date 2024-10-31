@@ -4433,6 +4433,7 @@ input[type=number] {
   background: transparent;
   border-color: transparent;
   color: red;
+  z-index: 3;
   border-radius: 5px;
 }
 
