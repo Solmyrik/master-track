@@ -39,6 +39,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    cursor: pointer;
     p {
       font-weight: 400;
       font-size: 16px;
@@ -46,6 +47,15 @@
       color: $text-grey;
       @media (max-width: $tablet) {
         font-size: 14px;
+      }
+    }
+    &:hover {
+      .products__button {
+        svg {
+          path {
+            stroke: #c42e2c;
+          }
+        }
       }
     }
   }

@@ -4737,6 +4737,7 @@ input[type=number] {
   display: flex;
   gap: 20px;
   align-items: center;
+  cursor: pointer;
 }
 .products__right p {
   font-weight: 400;
@@ -4748,6 +4749,9 @@ input[type=number] {
   .products__right p {
     font-size: 14px;
   }
+}
+.products__right:hover .products__button svg path {
+  stroke: #c42e2c;
 }
 .products__button {
   background: inherit;

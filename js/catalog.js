@@ -38,7 +38,7 @@ function filtersChange(button, filter) {
 
   button.addEventListener('click', (e) => {
     button.classList.toggle('active');
-    const text = button.previousElementSibling;
+    const text = button.querySelector('p');
 
     if (button.classList.contains('active')) {
       text.textContent = 'Закрыть';
