@@ -59,8 +59,8 @@ const range = (item) => {
   let lowerVal = parseInt(lowerSlider.value);
   let upperVal = parseInt(upperSlider.value);
 
-  oneTextInput.value = upperSlider.value;
-  twoTextInput.value = lowerSlider.value;
+  oneTextInput.placeholder = `макс. ${upperSlider.max}`;
+  twoTextInput.placeholder = `мин. ${lowerSlider.min}`;
 
   rangeValue.textContent = upperSlider.value;
   rangeValue.style.left = `calc(${
@@ -139,6 +139,10 @@ const range = (item) => {
   };
 
   oneTextInput.addEventListener('input', (e) => {
+    if (!/^[0-9]*$/.test(e.target.value)) {
+      e.target.value = upperSlider.max;
+    }
+
     const value = Number(e.target.value);
 
     if (value > upperSlider.max || value < lowerSlider.value) {
@@ -158,6 +162,10 @@ const range = (item) => {
   });
 
   twoTextInput.addEventListener('input', (e) => {
+    if (!/^[0-9]*$/.test(e.target.value)) {
+      e.target.value = upperSlider.min;
+    }
+
     const value = Number(e.target.value);
 
     if (value < lowerSlider.min || value > upperSlider.value) {

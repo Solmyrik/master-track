@@ -25,6 +25,7 @@
 .price-wrap-1,
 .price-wrap-2 {
   flex: 0 1 50%;
+  position: relative;
   input {
     width: 100%;
     background: $bg-white;
@@ -32,17 +33,55 @@
     border-radius: 300px;
     font-weight: 400;
     font-size: 14px;
-    color: $text-light-grey;
+    color: $text-grey;
     &::placeholder {
       font-weight: 400;
       font-size: 14px;
       line-height: 120%;
       color: $text-light-grey;
     }
+    &:focus {
+      padding: 20.5px 20px 6.5px 20px;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
     @media (max-width: $mobile) {
       padding: 12px 20px;
     }
   }
+}
+.price-wrap-1 p {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  color: $text-light-grey;
+}
+.price-wrap-1 p {
+  display: none; /* Скрываем текст по умолчанию */
+}
+
+.price-wrap-1:focus-within p {
+  display: block; /* Показываем текст, когда есть фокус на инпуте */
+}
+.price-wrap-2 p {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 120%;
+  color: $text-light-grey;
+}
+.price-wrap-2 p {
+  display: none; /* Скрываем текст по умолчанию */
+}
+
+.price-wrap-2:focus-within p {
+  display: block; /* Показываем текст, когда есть фокус на инпуте */
 }
 .price-track {
   position: absolute;
