@@ -8,13 +8,40 @@ const range = (item) => {
   const parrent = item.closest('.filters');
   const reset = parrent.querySelector('.filters__reset');
 
+  const track = item.querySelector('.price-track');
+
   const rangeValue = item.querySelector('.price-field-label-lower');
   const rangeValueUpper = item.querySelector('.price-field-label-upper');
   const thumbWidth = 32;
   let rangeWidth = item.offsetWidth - thumbWidth;
 
+  console.log(track);
+
+  function updateTrack() {
+    const lowerValue = parseInt(lowerSlider.value);
+    const upperValue = parseInt(upperSlider.value);
+
+    if (lowerValue == lowerSlider.min && upperValue == lowerSlider.max) {
+      console.log(track, 'track');
+      track.classList.add('invalid');
+    } else {
+      track.classList.remove('invalid');
+    }
+
+    // Для отображения состояния ползунков можно добавить логику изменения ширины полоски
+    const percentLower =
+      ((lowerValue - lowerSlider.min) / (lowerSlider.max - lowerSlider.min)) * 100;
+    const percentUpper =
+      ((upperValue - lowerSlider.min) / (lowerSlider.max - lowerSlider.min)) * 100;
+
+    track.style.left = `${percentLower}%`;
+    track.style.width = `${percentUpper - percentLower}%`;
+  }
+
   function updateRangeWidth() {
     rangeWidth = item.offsetWidth - thumbWidth;
+
+    updateTrack();
 
     rangeValue.textContent = upperSlider.value;
     rangeValue.style.left = `calc(${
@@ -45,9 +72,13 @@ const range = (item) => {
   }px)`;
   rangeValueUpper.textContent = lowerSlider.value;
 
+  updateTrack();
+
   upperSlider.oninput = function () {
     lowerVal = parseInt(lowerSlider.value);
     upperVal = parseInt(upperSlider.value);
+
+    updateTrack();
 
     rangeValue.style.left = `calc(${
       (rangeWidth / (upperSlider.max - upperSlider.min)) * (upperVal - upperSlider.min)
@@ -78,6 +109,8 @@ const range = (item) => {
   lowerSlider.oninput = function () {
     lowerVal = parseInt(lowerSlider.value);
     upperVal = parseInt(upperSlider.value);
+
+    updateTrack();
 
     rangeValueUpper.style.left = `calc(${
       (rangeWidth / (upperSlider.max - upperSlider.min)) * (lowerVal - upperSlider.min)
@@ -122,6 +155,7 @@ const range = (item) => {
     rangeValue.style.left = `calc(${
       (rangeWidth / (upperSlider.max - upperSlider.min)) * (upperSlider.value - upperSlider.min)
     }px)`;
+    updateTrack();
   });
 
   twoTextInput.addEventListener('input', (e) => {
@@ -141,6 +175,7 @@ const range = (item) => {
     rangeValueUpper.style.left = `calc(${
       (rangeWidth / (lowerSlider.max - lowerSlider.min)) * (lowerSlider.value - lowerSlider.min)
     }px)`;
+    updateTrack();
   });
 
   reset.addEventListener('click', (e) => {
@@ -164,6 +199,7 @@ const range = (item) => {
     inputCheckboxes.forEach((input) => {
       input.checked = false;
     });
+    updateTrack();
   });
 };
 

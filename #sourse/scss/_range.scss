@@ -44,6 +44,19 @@
     }
   }
 }
+.price-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px; /* Высота полоски */
+  background: $accent-red;
+  transform: translateY(-3px);
+  z-index: 2;
+  &.invalid {
+    display: none;
+  }
+}
 
 .price-field {
   position: relative;
