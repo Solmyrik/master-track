@@ -189,14 +189,14 @@ const range = (item) => {
   reset.addEventListener('click', (e) => {
     upperSlider.value = upperSlider.max;
     rangeValue.textContent = upperSlider.max;
-    oneTextInput.value = upperSlider.max;
+    oneTextInput.value = '';
     rangeValue.style.left = `calc(${
       (rangeWidth / (upperSlider.max - upperSlider.min)) * (upperSlider.value - upperSlider.min)
     }px)`;
 
     lowerSlider.value = lowerSlider.min;
     rangeValueUpper.textContent = lowerSlider.min;
-    twoTextInput.value = lowerSlider.min;
+    twoTextInput.value = '';
     rangeValueUpper.style.left = `calc(${
       (rangeWidth / (lowerSlider.max - lowerSlider.min)) * (lowerSlider.min - lowerSlider.min)
     }px)`;
