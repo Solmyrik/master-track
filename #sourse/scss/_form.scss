@@ -63,6 +63,11 @@
     &:focus {
       color: $text-dark;
       border-radius: 0;
+      &::placeholder {
+        color: transparent; // Скрыть placeholder при фокусе
+        /* Или можно использовать: */
+        /* opacity: 0; */
+      }
     }
   }
 
@@ -87,6 +92,13 @@
       font-size: 14px !important;
       line-height: 120%;
       color: $text-grey;
+    }
+    &:focus {
+      &::placeholder {
+        color: transparent; // Скрыть placeholder при фокусе
+        /* Или можно использовать: */
+        /* opacity: 0; */
+      }
     }
   }
 

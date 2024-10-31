@@ -2345,6 +2345,16 @@ body.lock {
   color: #2e2d2d;
   border-radius: 0;
 }
+.form__input:focus::-moz-placeholder {
+  color: transparent;
+  /* Или можно использовать: */
+  /* opacity: 0; */
+}
+.form__input:focus::placeholder {
+  color: transparent;
+  /* Или можно использовать: */
+  /* opacity: 0; */
+}
 .form__textarea {
   height: 80px;
   width: 100%;
@@ -2373,6 +2383,16 @@ body.lock {
   font-size: 14px !important;
   line-height: 120%;
   color: #4c4a4a;
+}
+.form__textarea:focus::-moz-placeholder {
+  color: transparent;
+  /* Или можно использовать: */
+  /* opacity: 0; */
+}
+.form__textarea:focus::placeholder {
+  color: transparent;
+  /* Или можно использовать: */
+  /* opacity: 0; */
 }
 .form__check {
   margin-bottom: 40px;
