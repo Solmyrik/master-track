@@ -139,18 +139,17 @@ const range = (item) => {
   };
 
   oneTextInput.addEventListener('input', (e) => {
-    const value = e.target.value;
-    if (value > upperSlider.max) {
-      e.target.value = upperSlider.max;
+    const value = Number(e.target.value);
+
+    if (value > upperSlider.max || value < lowerSlider.value) {
       upperSlider.value = upperSlider.max;
-    }
-
-    if (value < upperSlider.min) {
-      e.target.value = upperSlider.min;
+      console.log('ok');
+    } else if (value < upperSlider.min) {
       upperSlider.value = upperSlider.min;
+    } else {
+      upperSlider.value = value;
     }
 
-    upperSlider.value = value;
     rangeValue.textContent = upperSlider.value;
     rangeValue.style.left = `calc(${
       (rangeWidth / (upperSlider.max - upperSlider.min)) * (upperSlider.value - upperSlider.min)
@@ -159,18 +158,19 @@ const range = (item) => {
   });
 
   twoTextInput.addEventListener('input', (e) => {
-    const value = e.target.value;
-    if (value > lowerSlider.max) {
-      e.target.value = lowerSlider.max;
-      lowerSlider.value = lowerSlider.max;
+    const value = Number(e.target.value);
+
+    if (value < lowerSlider.min || value > upperSlider.value) {
+      lowerSlider.value = lowerSlider.min;
+    } else if (value < lowerSlider.min) {
+      lowerSlider.value = lowerSlider.min;
+    } else {
+      lowerSlider.value = value;
     }
 
     if (value < lowerSlider.min) {
-      e.target.value = lowerSlider.min;
-      lowerSlider.value = lowerSlider.min;
     }
 
-    lowerSlider.value = value;
     rangeValueUpper.textContent = lowerSlider.value;
     rangeValueUpper.style.left = `calc(${
       (rangeWidth / (lowerSlider.max - lowerSlider.min)) * (lowerSlider.value - lowerSlider.min)
