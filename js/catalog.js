@@ -4,6 +4,13 @@ const onChangeSize = (e) => {
   const isChecked = e.target.checked;
   const parrent = e.target.closest('.products');
   const images = parrent.querySelectorAll('.catalog-products__img');
+  const text = parrent.querySelector('.products__left p');
+
+  if (isChecked) {
+    text.textContent = 'Показать изображения';
+  } else {
+    text.textContent = 'Показать размеры';
+  }
 
   images.forEach((img) => {
     if (isChecked) {
