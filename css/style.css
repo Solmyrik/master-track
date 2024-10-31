@@ -4888,6 +4888,15 @@ input[type=number] {
     font-size: 20px;
   }
 }
+.footer__adres {
+  max-width: 174px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .footer__adres {
+    max-width: 200px;
+  }
+}
 .footer__bottom {
   display: flex;
   justify-content: space-between;
