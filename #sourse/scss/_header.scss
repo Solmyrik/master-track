@@ -186,6 +186,7 @@
     padding: 7px 15px;
     border-radius: 300px;
     background-color: $bg-total-dark;
+    border: 1px solid $bg-total-dark;
     font-size: 16px;
     line-height: 120%;
     color: $text-white;
@@ -193,6 +194,7 @@
     &:hover {
       background: $bg-light;
       color: $bg-total-dark;
+      border: 1px solid #2e2d2d;
     }
   }
 
