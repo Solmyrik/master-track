@@ -2441,6 +2441,8 @@ body.lock {
   gap: 10px;
 }
 .breadcrumbs__body a {
+  display: flex;
+  gap: 4px;
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
@@ -2448,6 +2450,16 @@ body.lock {
 }
 .breadcrumbs__body a:last-child {
   color: #2e2d2d;
+}
+@media (max-width: 767px) {
+  .breadcrumbs__body a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 360px) {
+  .breadcrumbs__body {
+    gap: 5px;
+  }
 }
 .breadcrumbs__arrow svg path {
   stroke: #aaadb2;
@@ -4855,6 +4867,324 @@ input[type=number] {
 .catalog-products__link {
   flex: 0 0 16px;
 }
+.dashboard {
+  margin-bottom: 90px;
+}
+.dashboard__container {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 1140px) {
+  .dashboard__container {
+    gap: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.dashboard__left {
+  flex: 0 1 50%;
+}
+@media (max-width: 1140px) {
+  .dashboard__left {
+    flex: 0 1 428px;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard__left {
+    flex: auto;
+  }
+}
+.dashboard__slider {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.dashboard__right {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1140px) {
+  .dashboard__right {
+    flex: 1 1 auto;
+    justify-content: start;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard__title {
+    max-width: 220px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1140px) {
+  .dashboard__content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 100%;
+    gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard__content {
+    gap: 130px;
+  }
+}
+.dashboard__links {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #b5b4b0;
+}
+@media (max-width: 1140px) {
+  .dashboard__links {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.dashboard__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #4c4a4a;
+  font-family: "InterMedium";
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.dashboard__link:hover {
+  color: #c42e2c;
+}
+.dashboard__link.active {
+  color: #c42e2c;
+}
+@media (max-width: 1140px) {
+  .dashboard__link.active {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #4c4a4a;
+    border-bottom: 1px solid #545454;
+  }
+}
+@media (max-width: 1140px) {
+  .dashboard__link_m {
+    display: none;
+  }
+}
+@media (max-width: 1140px) {
+  .dashboard__link {
+    font-family: "InterRegular";
+    text-transform: none;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.dashboard__items {
+  margin-bottom: 60px;
+  position: relative;
+}
+@media (max-width: 1140px) {
+  .dashboard__items {
+    margin-bottom: 0;
+  }
+}
+.dashboard__item {
+  opacity: 0;
+  visibility: hidden;
+}
+.dashboard__item.active {
+  opacity: 1;
+  visibility: visible;
+}
+.dashboard__item_documents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 1140px) {
+  .dashboard__item_documents {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+@media (max-width: 767px) {
+  .dashboard__item_documents {
+    top: 0;
+    transform: translate(0, 0%);
+  }
+}
+.dashboard__document {
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.dashboard__document p {
+  transition: all 0.2s;
+  position: relative;
+}
+.dashboard__document p::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #c42e2c;
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .dashboard__document p:hover::before {
+    width: 100%;
+  }
+}
+@media (max-width: 1140px) {
+  .dashboard__button {
+    opacity: 0;
+    height: 0px;
+    visibility: hidden;
+  }
+}
+@media (max-width: 767px) {
+  .dashboard__button {
+    display: none;
+  }
+}
+
+.main-swiper {
+  width: 560px;
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1140px) {
+  .main-swiper {
+    width: 428px;
+    height: 404px;
+  }
+}
+@media (max-width: 767px) {
+  .main-swiper {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main-swiper-prev {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%) rotate(180deg);
+  cursor: pointer;
+}
+
+.main-swiper-next {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.main-swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-flow: column;
+}
+
+.main-swiper-slide {
+  width: 100%;
+  height: 510px;
+}
+@media (max-width: 1140px) {
+  .main-swiper-slide {
+    height: 404px;
+  }
+}
+@media (max-width: 767px) {
+  .main-swiper-slide {
+    height: auto;
+  }
+}
+.main-swiper-slide img {
+  border: 1px solid #b5b4b0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.thumbnail-swiper {
+  flex: 0 0 86px;
+  height: 510px;
+  overflow: hidden;
+}
+@media (max-width: 1245px) {
+  .thumbnail-swiper {
+    display: none;
+  }
+}
+
+.thumbnail-swiper-wrapper {
+  grid-template-rows: repeat(5, 1fr);
+  grid-auto-flow: row;
+}
+
+.thumbnail-swiper-slide {
+  cursor: pointer;
+  width: 86px;
+  height: 86px;
+  border: 1px solid #b5b4b0;
+}
+.thumbnail-swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+@media (max-width: 1245px) {
+  .swiper-pagination {
+    display: flex;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 30px; /* Ширина буллета */
+  height: 2px; /* Высота буллета */
+  background: #2e2d2d; /* Цвет буллета */
+  margin: 0 10px; /* Отступы между буллетами */
+  opacity: 0.5; /* Прозрачность по умолчанию */
+  transition: opacity 0.3s; /* Плавный переход при наведении */
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1; /* Полная непрозрачность для активного буллета */
+}
+
 .footer {
   background: #1e1e1b;
   padding: 36px 0px;

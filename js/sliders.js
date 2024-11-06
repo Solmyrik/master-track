@@ -79,3 +79,56 @@ if (productFeedSliderContainer) {
     },
   });
 }
+
+// двойной слайдер на персональной странице
+
+const mainSwiperContainer = document.querySelector('.main-swiper');
+
+if (mainSwiperContainer) {
+  const mainSwiper = new Swiper('.main-swiper', {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    slideToClickedSlide: true,
+    navigation: {
+      prevEl: '.main-swiper-prev',
+      nextEl: '.main-swiper-next',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  // Initialize the thumbnail Swiper
+  const thumbnailSwiper = new Swiper('.thumbnail-swiper', {
+    direction: 'vertical',
+    spaceBetween: 20,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+    },
+  });
+
+  mainSwiper.on('slideChange', function () {
+    const activeIndex = mainSwiper.realIndex;
+    thumbnailSwiper.slides.removeClass('swiper-slide-thumb-active');
+    thumbnailSwiper.slides.eq(activeIndex).addClass('swiper-slide-thumb-active');
+  });
+
+  // // Добавление обработки клика для миниатюр
+  thumbnailSwiper.on('click', function (swiper) {
+    const clickedIndex = swiper.clickedIndex;
+    if (clickedIndex !== undefined) {
+      mainSwiper.slideToLoop(clickedIndex);
+    }
+  });
+}
