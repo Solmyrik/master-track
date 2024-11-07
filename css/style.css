@@ -4612,13 +4612,16 @@ input[type=number] {
   }
 }
 .filters__checkboxes {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 @media (max-width: 767px) {
   .filters__checkboxes {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 5px;
+         column-gap: 5px;
     row-gap: 30px;
     justify-items: start;
     position: relative;
@@ -4632,7 +4635,6 @@ input[type=number] {
 .filters__name {
   color: #f4f4ef;
   margin-bottom: 20px;
-  padding-right: 5px;
 }
 .filters ._wallet-chectext {
   color: #d6d6d6;

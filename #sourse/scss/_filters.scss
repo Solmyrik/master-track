@@ -25,11 +25,13 @@
   }
 
   &__checkboxes {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 50px;
     @media (max-width: $mobile) {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
+      column-gap: 5px;
       row-gap: 30px;
       justify-items: start;
       position: relative;
@@ -46,7 +48,6 @@
   &__name {
     color: $text-white;
     margin-bottom: 20px;
-    padding-right: 5px;
   }
   ._wallet-chectext {
     color: $dark-mode-light-grey;
