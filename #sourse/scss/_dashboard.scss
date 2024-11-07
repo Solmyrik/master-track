@@ -1,5 +1,11 @@
 .dashboard {
   margin-bottom: 90px;
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
   &__container {
     display: flex;
     gap: 30px;

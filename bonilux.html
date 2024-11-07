@@ -8,6 +8,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="js/sliders.js"></script>
     <script defer src="js/personal.js"></script>
+    <script defer src="js/modifications.js"></script>
     <script defer src="js/script.js"></script>
   </head>
   <body>
@@ -296,6 +297,114 @@
                     </svg>
                   </span>
                 </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="modifications" class="modifications">
+          <div class="modifications__container">
+            <h2 class="modifications__title _h2">Модификации</h2>
+            <div class="modifications__columns">
+              <div class="modifications__column">
+                <h6 class="modifications__names">Мощность</h6>
+                <nav class="modifications__nav">
+                  <ul class="modifications__items">
+                    <li class="modifications__item active">21 Вт</li>
+                    <li class="modifications__item">30 Вт</li>
+                    <li class="modifications__item">40 Вт</li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modifications__column">
+                <h6 class="modifications__names">Цветовая температура</h6>
+                <nav class="modifications__nav">
+                  <ul class="modifications__items">
+                    <li class="modifications__item">3000 К</li>
+                    <li class="modifications__item">4000 К</li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modifications__column">
+                <h6 class="modifications__names">Индекс цветопередачи</h6>
+                <nav class="modifications__nav">
+                  <ul class="modifications__items">
+                    <li class="modifications__item">90</li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modifications__column">
+                <h6 class="modifications__names">Цвет корпуса</h6>
+                <nav class="modifications__nav">
+                  <ul class="modifications__items">
+                    <li class="modifications__item">белый</li>
+                    <li class="modifications__item">черный</li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modifications__column">
+                <h6 class="modifications__names">Угол рассеивания</h6>
+                <nav class="modifications__nav">
+                  <ul class="modifications__items">
+                    <li class="modifications__item">15°</li>
+                    <li class="modifications__item">24°</li>
+                    <li class="modifications__item">36°</li>
+                    <li class="modifications__item">60°</li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="modifications__bottom">
+              <div class="filters__range">
+                <p class="filters__name _par-m">Световой поток, Лм</p>
+                <fieldset class="filter-price filter-price-1">
+                  <div class="price-field price-field_personal">
+                    <div class="price-track"></div>
+                    <div class="price-field-label-lower price-field-label">10</div>
+                    <div class="price-field-label-upper price-field-label">10</div>
+                    <input
+                      class="lower"
+                      type="range"
+                      min="2143"
+                      max="4680"
+                      value="2143"
+                      id="lower"
+                    />
+                    <input
+                      class="upper"
+                      type="range"
+                      min="2143"
+                      max="4680"
+                      value="4680"
+                      id="upper"
+                    />
+                  </div>
+                  <div class="price-wrap">
+                    <div class="price-container">
+                      <div class="price-wrap-1">
+                        <p>введите значение</p>
+                        <input type="text" class="two-text-range-value" id="one" />
+                      </div>
+                      <div class="price-wrap-2">
+                        <p>введите значение</p>
+                        <input type="text" class="one-text-range-value" id="two" />
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="modifications__buttons">
+                <button class="modifications__reset">
+                  <p>Сбросить настройки</p>
+                  <svg
+                    width="13"
+                    height="13"
+                    viewBox="0 0 13 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M1 1L12 12M12 1L1.55 12" stroke="#F4F4EF" stroke-linecap="round" />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
