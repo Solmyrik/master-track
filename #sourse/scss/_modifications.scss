@@ -187,9 +187,10 @@
     &_2 {
       position: absolute;
       right: 15px;
-      bottom: -10px;
+      bottom: -20px;
       @media (max-width: $mobile) {
         right: 15px;
+        bottom: -10px;
       }
     }
   }

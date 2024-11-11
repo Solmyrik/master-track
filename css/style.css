@@ -5463,11 +5463,12 @@ input[type=number] {
 .modifications__reset_2 {
   position: absolute;
   right: 15px;
-  bottom: -10px;
+  bottom: -20px;
 }
 @media (max-width: 767px) {
   .modifications__reset_2 {
     right: 15px;
+    bottom: -10px;
   }
 }
 .modifications .filters__name {
