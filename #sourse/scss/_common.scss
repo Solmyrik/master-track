@@ -22,6 +22,9 @@
         font-size: 14px;
       }
     }
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
     @media (max-width: 360px) {
       gap: 5px;
     }

@@ -7,38 +7,38 @@ let listActiveItems = 0;
 const allItemsList = listItems.length;
 let isHiddenButton = false;
 
-if (allItemsList > listActiveItems) {
-  listItems.forEach((item, e) => {
-    if (6 > e + 1) {
-      item.classList.add('hidden');
-      listActiveItems++;
-    }
-  });
-}
+// if (allItemsList > listActiveItems) {
+//   listItems.forEach((item, e) => {
+//     if (6 > e + 1) {
+//       item.classList.add('hidden');
+//       listActiveItems++;
+//     }
+//   });
+// }
 
-listMore.addEventListener('click', (e) => {
-  console.log(listActiveItems);
-  if (!isHiddenButton) {
-    for (let i = listActiveItems - 1; i++; listActiveItems + 5) {
-      if (!listItems[i]) {
-        listMore.textContent = 'свернуть список';
-        break;
-      }
-      listItems[i].classList.add('hidden');
-      isHiddenButton = true;
-    }
-  } else {
-    for (let i = listActiveItems - 1; i++; listActiveItems + 5) {
-      if (!listItems[i]) {
-        listMore.textContent = 'показать еще';
-        break;
-      }
-      console.log(listItems[i]);
-      listItems[i].classList.remove('hidden');
-      isHiddenButton = false;
-    }
-  }
-});
+// listMore.addEventListener('click', (e) => {
+//   console.log(listActiveItems);
+//   if (!isHiddenButton) {
+//     for (let i = listActiveItems - 1; i++; listActiveItems + 5) {
+//       if (!listItems[i]) {
+//         listMore.textContent = 'свернуть список';
+//         break;
+//       }
+//       listItems[i].classList.add('hidden');
+//       isHiddenButton = true;
+//     }
+//   } else {
+//     for (let i = listActiveItems - 1; i++; listActiveItems + 5) {
+//       if (!listItems[i]) {
+//         listMore.textContent = 'показать еще';
+//         break;
+//       }
+//       console.log(listItems[i]);
+//       listItems[i].classList.remove('hidden');
+//       isHiddenButton = false;
+//     }
+//   }
+// });
 
 console.log(modificationItems);
 if (modificationItems && modificationItems.length) {
@@ -281,6 +281,81 @@ if (filterPrices && filterPrices.length) {
   });
 }
 
-// фильтрация
+// reset
+const reset = document.querySelector('.modifications__reset_2');
 
-// фильтрация end
+if (reset) {
+  reset.addEventListener('click', (e) => {
+    modificationItems.forEach((item) => {
+      item.classList.remove('active');
+    });
+    activeFilterElements.length = 0;
+  });
+}
+
+// reset end
+
+//list
+const lists = document.querySelectorAll('.list');
+
+const onChangeList = (item) => {
+  const listItems = item.querySelectorAll('.list-item-m');
+  const button = item.querySelector('.list__more ');
+
+  let listActiveItems = 0;
+  const allItemsList = listItems.length;
+  let isHiddenButton = false;
+
+  for (let i = 0; i < 5; i++) {
+    if (i >= allItemsList) break;
+    listItems[i].classList.add('hidden');
+    listActiveItems++;
+  }
+
+  button.addEventListener('click', (e) => {
+    const currentActive = listActiveItems;
+
+    if (!isHiddenButton) {
+      for (let i = currentActive; i < currentActive + 4; i++) {
+        if (i >= allItemsList) {
+          button.textContent = 'свернуть список';
+          isHiddenButton = true;
+          break;
+        }
+        listItems[i].classList.add('hidden');
+        listActiveItems++;
+      }
+    } else {
+      for (let i = 5; i < currentActive; i++) {
+        button.textContent = 'показать еще';
+        isHiddenButton = false;
+
+        listItems[i].classList.remove('hidden');
+        listActiveItems = 5;
+      }
+    }
+  });
+
+  console.log(button, 'list__more ');
+};
+
+if (lists && lists.length) {
+  lists.forEach((item) => {
+    onChangeList(item);
+  });
+}
+//list end
+
+// баяны в персональной
+
+const dopLabels = document.querySelectorAll('.dop__label');
+
+if (dopLabels && dopLabels.length) {
+  dopLabels.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      item.classList.toggle('active');
+      item.nextElementSibling.classList.toggle('active');
+    });
+  });
+}
+// баяны в персональной end

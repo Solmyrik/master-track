@@ -1,0 +1,87 @@
+.scheme {
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__block {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__slide {
+    img {
+      width: 100%;
+    }
+  }
+}
+.scheme-swiper-prev {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%) rotate(180deg);
+  cursor: pointer;
+}
+.scheme-swiper-next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.swiper-block {
+}
+.swiper-wraper {
+}
+.swiper-slide {
+}
+.scheme-swiper-prev {
+}
+.scheme-swiper-next {
+}
+.scheme-pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  @media (max-width: 1245px) {
+    display: flex;
+  }
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  @media (max-width: 1245px) {
+    display: flex;
+  }
+}
+.swiper-pagination-bullet {
+  width: 30px; /* Ширина буллета */
+  height: 2px; /* Высота буллета */
+  background: $bg-total-dark; /* Цвет буллета */
+  margin: 0 10px; /* Отступы между буллетами */
+  opacity: 0.5; /* Прозрачность по умолчанию */
+  cursor: pointer;
+  transition: opacity 0.3s; /* Плавный переход при наведении */
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1; /* Полная непрозрачность для активного буллета */
+}

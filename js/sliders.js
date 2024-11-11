@@ -132,3 +132,20 @@ if (mainSwiperContainer) {
     }
   });
 }
+
+const schemeblockContainer = document.querySelector('.scheme__block');
+if (schemeblockContainer) {
+  const schemeblock = new Swiper('.scheme__block', {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    slideToClickedSlide: true,
+    navigation: {
+      prevEl: '.scheme-swiper-prev',
+      nextEl: '.scheme-swiper-next',
+    },
+    pagination: {
+      el: '.scheme-pagination',
+      clickable: true,
+    },
+  });
+}

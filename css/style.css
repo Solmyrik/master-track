@@ -2456,6 +2456,11 @@ body.lock {
     font-size: 14px;
   }
 }
+@media (max-width: 767px) {
+  .breadcrumbs__body {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 360px) {
   .breadcrumbs__body {
     gap: 5px;
@@ -4579,6 +4584,76 @@ input[type=number] {
 }
 
 /* Style for active state input */
+.dop__title {
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .dop__title {
+    margin-bottom: 30px;
+  }
+}
+.dop__item {
+  padding: 30px 0px;
+  border-bottom: 1px solid #2e2d2d;
+}
+.dop__content {
+  display: none;
+}
+.dop__content.active {
+  display: block;
+}
+.dop__label {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--text-dark);
+  font-family: "InterMedium";
+}
+.dop__label::before {
+  right: 0px;
+  top: 50%;
+  content: "";
+  position: absolute;
+  width: 16px;
+  background-color: #2e2d2d;
+  height: 1.5px;
+  transition: all 0.5s;
+}
+@media (max-width: 767px) {
+  .dop__label::before {
+    width: 24px;
+  }
+}
+.dop__label::after {
+  right: 0px;
+  top: 50%;
+  content: "";
+  position: absolute;
+  width: 16px;
+  background-color: #2e2d2d;
+  height: 1.5px;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+}
+@media (max-width: 767px) {
+  .dop__label::after {
+    width: 24px;
+  }
+}
+@media (hover: hover) {
+  .dop__label:hover::before, .dop__label:hover::after {
+    background-color: #c42e2c;
+  }
+}
+.dop__label.active::before, .dop__label.active::after {
+  background-color: #c42e2c;
+}
+.dop__label.active::after {
+  transform: rotate(0deg);
+}
+
 .filters {
   background: #2e2d2d;
   margin-bottom: 0px;
@@ -5208,6 +5283,9 @@ input[type=number] {
     padding: 30px 0px;
   }
 }
+.modifications__container {
+  position: relative;
+}
 .modifications__title {
   margin-bottom: 40px;
 }
@@ -5221,6 +5299,36 @@ input[type=number] {
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
   margin-bottom: 23px;
+}
+.modifications__columns_6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.modifications__columns_2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .modifications__columns_2 {
+    margin-bottom: 10px;
+  }
+}
+.modifications__columns_2 .modifications__column {
+  display: flex;
+  gap: 5px;
+}
+.modifications__columns_2 .modifications__items {
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.modifications__columns_2 .modifications__names {
+  width: 140px;
+}
+@media (max-width: 767px) {
+  .modifications__columns_2 .modifications__names {
+    width: 110px;
+  }
 }
 @media (max-width: 767px) {
   .modifications__columns {
@@ -5350,6 +5458,16 @@ input[type=number] {
   .modifications__reset {
     right: 0;
     bottom: 0;
+  }
+}
+.modifications__reset_2 {
+  position: absolute;
+  right: 15px;
+  bottom: -10px;
+}
+@media (max-width: 767px) {
+  .modifications__reset_2 {
+    right: 15px;
   }
 }
 .modifications .filters__name {
@@ -5622,6 +5740,82 @@ input[type=number] {
   .list__button:hover span svg path {
     fill: #1e1e1b;
   }
+}
+
+.scheme__title {
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .scheme__title {
+    margin-bottom: 30px;
+  }
+}
+.scheme__block {
+  overflow: hidden;
+  position: relative;
+}
+.scheme__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.scheme__slide img {
+  width: 100%;
+}
+
+.scheme-swiper-prev {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%) rotate(180deg);
+  cursor: pointer;
+}
+
+.scheme-swiper-next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.scheme-pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+@media (max-width: 1245px) {
+  .scheme-pagination {
+    display: flex;
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+@media (max-width: 1245px) {
+  .swiper-pagination {
+    display: flex;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 30px; /* Ширина буллета */
+  height: 2px; /* Высота буллета */
+  background: #2e2d2d; /* Цвет буллета */
+  margin: 0 10px; /* Отступы между буллетами */
+  opacity: 0.5; /* Прозрачность по умолчанию */
+  cursor: pointer;
+  transition: opacity 0.3s; /* Плавный переход при наведении */
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1; /* Полная непрозрачность для активного буллета */
 }
 
 .footer {

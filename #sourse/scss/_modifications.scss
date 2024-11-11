@@ -9,6 +9,7 @@
   }
 
   &__container {
+    position: relative;
   }
 
   &__title {
@@ -23,6 +24,32 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     margin-bottom: 23px;
+    &_6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    &_2 {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      @media (max-width: $mobile) {
+        margin-bottom: 10px;
+      }
+      .modifications__column {
+        display: flex;
+        gap: 5px;
+      }
+      .modifications__items {
+        flex-direction: row;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .modifications__names {
+        width: 140px;
+        @media (max-width: $mobile) {
+          width: 110px;
+        }
+      }
+    }
     @media (max-width: $mobile) {
       display: flex;
       flex-direction: column;
@@ -156,6 +183,14 @@
     @media (max-width: $mobile) {
       right: 0;
       bottom: 0;
+    }
+    &_2 {
+      position: absolute;
+      right: 15px;
+      bottom: -10px;
+      @media (max-width: $mobile) {
+        right: 15px;
+      }
     }
   }
 
