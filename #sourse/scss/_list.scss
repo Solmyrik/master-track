@@ -1,0 +1,234 @@
+.list {
+  padding-top: 50px;
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+
+  &__label {
+    &:nth-of-type(1) {
+      padding-left: 140px;
+      @media (max-width: 1120px) {
+        padding-left: 118px;
+      }
+      @media (max-width: $mobile) {
+        padding-left: 0;
+      }
+    }
+    &:nth-of-type(2) {
+      width: 467px;
+      text-align: left;
+      @media (max-width: 1120px) {
+        width: 408px;
+      }
+      @media (max-width: $tablet) {
+        width: 360px;
+      }
+    }
+    &:nth-of-type(3) {
+      @media (max-width: $mobile) {
+        width: 108px;
+      }
+    }
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__items {
+  }
+
+  &__more {
+    margin-top: 50px;
+    width: fit-content;
+    @media (max-width: $tablet) {
+      margin-top: 30px;
+      border-bottom: 1px solid #2e2d2d !important;
+    }
+  }
+
+  &__item {
+    padding: 11px 0px;
+    display: none;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $strock-light-mode;
+
+    &:first-of-type {
+      border-top: 1px solid $strock-light-mode;
+    }
+    @media (max-width: $tablet) {
+      gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: baseline;
+      gap: 20px;
+      padding: 24px 0px;
+    }
+    &.hidden {
+      display: flex;
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    gap: 69px;
+    align-items: center;
+    @media (max-width: 1120px) {
+      gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      gap: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  &__img {
+    border: 1px solid $strock-light-mode;
+    flex: 0 0 88px;
+    width: 88px;
+    height: 88px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__values {
+    max-width: 640px;
+  }
+
+  &__article {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: $text-light-grey;
+    margin-bottom: 16px;
+    @media (max-width: $tablet) {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: $mobile) {
+      // line-height: 100%;
+    }
+  }
+
+  &__name {
+    line-height: 120%;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 89px;
+    @media (max-width: 1120px) {
+      gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      gap: 10px;
+      width: 100%;
+    }
+  }
+
+  &__counter {
+  }
+  @media (max-width: 1120px) {
+    .counter {
+      height: 50px;
+    }
+  }
+  @media (max-width: $mobile) {
+    .counter {
+      width: 130px;
+      height: 44px;
+    }
+  }
+
+  &__button {
+    border: 1px solid $bg-total-dark;
+    border-radius: 300px;
+    background-color: inherit;
+    padding: 0px 6px 0px 20px;
+    width: 248px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    @media (max-width: $tablet) {
+      width: 200px;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      height: 44px;
+      flex: 1 1 auto;
+    }
+    p {
+      flex: 1 1 auto;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: $inter500;
+      transition: all 0.3s;
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+    }
+    span {
+      border-radius: 50%;
+      background-color: $bg-total-dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 34px;
+      width: 34px;
+      flex: 0 0 34px;
+      transition: all 0.3s;
+      @media (max-width: $mobile) {
+        height: 32px;
+        width: 32px;
+        flex: 0 0 32px;
+      }
+      svg {
+        path {
+          transition: all 0.3s;
+        }
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: $bg-dark;
+
+        p {
+          color: $text-white;
+          text-align: left;
+        }
+        span {
+          background-color: $bg-light;
+          svg {
+            path {
+              fill: #1e1e1b;
+            }
+          }
+        }
+      }
+    }
+  }
+}

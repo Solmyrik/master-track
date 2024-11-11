@@ -696,7 +696,7 @@ body.lock {
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: 20;
+  z-index: 900;
 }
 .header .header__logo-w {
   display: block;
@@ -5377,6 +5377,251 @@ input[type=number] {
 
 .price-field_personal input[type=range]::-moz-range-track {
   background: #545454;
+}
+
+.list {
+  padding-top: 50px;
+}
+.list__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .list__top {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+.list__label:nth-of-type(1) {
+  padding-left: 140px;
+}
+@media (max-width: 1120px) {
+  .list__label:nth-of-type(1) {
+    padding-left: 118px;
+  }
+}
+@media (max-width: 767px) {
+  .list__label:nth-of-type(1) {
+    padding-left: 0;
+  }
+}
+.list__label:nth-of-type(2) {
+  width: 467px;
+  text-align: left;
+}
+@media (max-width: 1120px) {
+  .list__label:nth-of-type(2) {
+    width: 408px;
+  }
+}
+@media (max-width: 992px) {
+  .list__label:nth-of-type(2) {
+    width: 360px;
+  }
+}
+@media (max-width: 767px) {
+  .list__label:nth-of-type(3) {
+    width: 108px;
+  }
+}
+@media (max-width: 992px) {
+  .list__label {
+    font-size: 14px;
+  }
+}
+.list__more {
+  margin-top: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 992px) {
+  .list__more {
+    margin-top: 30px;
+    border-bottom: 1px solid #2e2d2d !important;
+  }
+}
+.list__item {
+  padding: 11px 0px;
+  display: none;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b5b4b0;
+}
+.list__item:first-of-type {
+  border-top: 1px solid #b5b4b0;
+}
+@media (max-width: 992px) {
+  .list__item {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .list__item {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    padding: 24px 0px;
+  }
+}
+.list__item.hidden {
+  display: flex;
+}
+.list__left {
+  display: flex;
+  justify-content: space-between;
+  gap: 69px;
+  align-items: center;
+}
+@media (max-width: 1120px) {
+  .list__left {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .list__left {
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+.list__img {
+  border: 1px solid #b5b4b0;
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+}
+.list__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.list__values {
+  max-width: 640px;
+}
+.list__article {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #aaadb2;
+  margin-bottom: 16px;
+}
+@media (max-width: 992px) {
+  .list__article {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+}
+.list__name {
+  line-height: 120%;
+}
+@media (max-width: 992px) {
+  .list__name {
+    font-size: 14px;
+  }
+}
+.list__right {
+  display: flex;
+  gap: 89px;
+}
+@media (max-width: 1120px) {
+  .list__right {
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .list__right {
+    gap: 10px;
+    width: 100%;
+  }
+}
+@media (max-width: 1120px) {
+  .list .counter {
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .list .counter {
+    width: 130px;
+    height: 44px;
+  }
+}
+.list__button {
+  border: 1px solid #2e2d2d;
+  border-radius: 300px;
+  background-color: inherit;
+  padding: 0px 6px 0px 20px;
+  width: 248px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .list__button {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .list__button {
+    width: 100%;
+    height: 44px;
+    flex: 1 1 auto;
+  }
+}
+.list__button p {
+  flex: 1 1 auto;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "InterMedium";
+  transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .list__button p {
+    font-size: 14px;
+  }
+}
+.list__button span {
+  border-radius: 50%;
+  background-color: #2e2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  flex: 0 0 34px;
+  transition: all 0.3s;
+}
+@media (max-width: 767px) {
+  .list__button span {
+    height: 32px;
+    width: 32px;
+    flex: 0 0 32px;
+  }
+}
+.list__button span svg path {
+  transition: all 0.3s;
+}
+@media (hover: hover) {
+  .list__button:hover {
+    background-color: #1e1e1b;
+  }
+  .list__button:hover p {
+    color: #f4f4ef;
+    text-align: left;
+  }
+  .list__button:hover span {
+    background-color: #f4f4ef;
+  }
+  .list__button:hover span svg path {
+    fill: #1e1e1b;
+  }
 }
 
 .footer {

@@ -1,11 +1,59 @@
 const modificationItems = document.querySelectorAll('.modifications__item');
+const listItems = document.querySelectorAll('.list-item-m');
+const listMore = document.querySelector('.list__more');
+
+const activeFilterElements = [];
+let listActiveItems = 0;
+const allItemsList = listItems.length;
+let isHiddenButton = false;
+
+if (allItemsList > listActiveItems) {
+  listItems.forEach((item, e) => {
+    if (6 > e + 1) {
+      item.classList.add('hidden');
+      listActiveItems++;
+    }
+  });
+}
+
+listMore.addEventListener('click', (e) => {
+  console.log(listActiveItems);
+  if (!isHiddenButton) {
+    for (let i = listActiveItems - 1; i++; listActiveItems + 5) {
+      if (!listItems[i]) {
+        listMore.textContent = 'свернуть список';
+        break;
+      }
+      listItems[i].classList.add('hidden');
+      isHiddenButton = true;
+    }
+  } else {
+    for (let i = listActiveItems - 1; i++; listActiveItems + 5) {
+      if (!listItems[i]) {
+        listMore.textContent = 'показать еще';
+        break;
+      }
+      console.log(listItems[i]);
+      listItems[i].classList.remove('hidden');
+      isHiddenButton = false;
+    }
+  }
+});
 
 console.log(modificationItems);
 if (modificationItems && modificationItems.length) {
   modificationItems.forEach((item) => {
-    console.log(item);
     item.addEventListener('click', (e) => {
-      item.classList.toggle('active');
+      console.log(item.classList.contains('active'));
+      if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        const index = activeFilterElements.indexOf(item.textContent);
+        activeFilterElements.splice(index, 1);
+      } else {
+        item.classList.add('active');
+        activeFilterElements.push(item.textContent);
+        console.log(activeFilterElements);
+      }
     });
   });
 }
@@ -199,6 +247,7 @@ const range = (item) => {
   });
 
   reset.addEventListener('click', (e) => {
+    console.log('reset');
     upperSlider.value = upperSlider.max;
     rangeValue.textContent = upperSlider.max;
     oneTextInput.value = '';
@@ -216,9 +265,10 @@ const range = (item) => {
     const inputCheckboxes = parrent.querySelectorAll('._checkbox-wallet');
     console.log(inputCheckboxes);
 
-    inputCheckboxes.forEach((input) => {
-      input.checked = false;
+    modificationItems.forEach((item) => {
+      item.classList.remove('active');
     });
+    activeFilterElements.length = 0;
     updateTrack();
   });
 };
@@ -230,3 +280,7 @@ if (filterPrices && filterPrices.length) {
     range(filterPrice);
   });
 }
+
+// фильтрация
+
+// фильтрация end
