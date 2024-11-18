@@ -5697,6 +5697,7 @@ input[type=number] {
   text-align: center;
   font-family: "InterMedium";
   transition: all 0.3s;
+  color: #2e2d2d;
 }
 @media (max-width: 767px) {
   .list__button p {
