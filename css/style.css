@@ -1790,9 +1790,6 @@ body.lock {
     transform: translate(-50px, -10px) !important;
   }
 }
-.level {
-  padding-bottom: 32px;
-}
 .level__top {
   display: flex;
   justify-content: space-between;
@@ -4619,7 +4616,7 @@ input[type=number] {
   width: 16px;
   background-color: #2e2d2d;
   height: 1.5px;
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 @media (max-width: 767px) {
   .dop__label::before {
@@ -4635,7 +4632,7 @@ input[type=number] {
   background-color: #2e2d2d;
   height: 1.5px;
   transform: rotate(-90deg);
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 @media (max-width: 767px) {
   .dop__label::after {

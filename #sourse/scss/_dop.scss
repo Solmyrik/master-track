@@ -42,7 +42,7 @@
       width: 16px;
       background-color: #2e2d2d;
       height: 1.5px;
-      transition: all 0.5s;
+      transition: all 0.1s;
       @media (max-width: $mobile) {
         width: 24px;
       }
@@ -57,7 +57,7 @@
       background-color: #2e2d2d;
       height: 1.5px;
       transform: rotate(-90deg);
-      transition: all 0.5s;
+      transition: all 0.1s;
       @media (max-width: $mobile) {
         width: 24px;
       }
