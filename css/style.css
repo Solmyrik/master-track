@@ -4977,6 +4977,11 @@ input[type=number] {
     flex: 0 1 428px;
   }
 }
+@media (max-width: 870px) {
+  .dashboard__left {
+    flex: 0 1 388px;
+  }
+}
 @media (max-width: 767px) {
   .dashboard__left {
     flex: auto;
@@ -5016,7 +5021,7 @@ input[type=number] {
 }
 @media (max-width: 767px) {
   .dashboard__content {
-    gap: 130px;
+    gap: 40px;
   }
 }
 .dashboard__links {
@@ -5033,6 +5038,14 @@ input[type=number] {
     border-bottom: 0;
     flex-direction: column;
     gap: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .dashboard__links {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 .dashboard__link {
@@ -5163,6 +5176,12 @@ input[type=number] {
     height: 404px;
   }
 }
+@media (max-width: 870px) {
+  .main-swiper {
+    width: 388px;
+    height: 368px;
+  }
+}
 @media (max-width: 767px) {
   .main-swiper {
     width: 100%;
@@ -5199,6 +5218,11 @@ input[type=number] {
 @media (max-width: 1140px) {
   .main-swiper-slide {
     height: 404px;
+  }
+}
+@media (max-width: 870px) {
+  .main-swiper-slide {
+    height: 368px;
   }
 }
 @media (max-width: 767px) {
